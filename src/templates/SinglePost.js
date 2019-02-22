@@ -42,18 +42,8 @@ export const SinglePostTemplate = ({
       </Link>
       <div className="SinglePost--Content relative">
         <div className="SinglePost--Meta">
-          {date && (
-            <time
-              className="SinglePost--Meta--Date"
-              itemProp="dateCreated pubdate datePublished"
-              date={date}
-            >
-              {_format(date, 'MMMM Do, YYYY')}
-            </time>
-          )}
           {categories && (
             <Fragment>
-              <span>|</span>
               {categories.map((cat, index) => (
                 <span key={cat.category} className="SinglePost--Meta--Category">
                   {cat.category}
@@ -71,17 +61,13 @@ export const SinglePostTemplate = ({
           </h1>
         )}
 
-        <div className="SinglePost--InnerContent">
-          <Content source={body} />
-        </div>
-
         <div className="SinglePost--Pagination">
           {prevPostURL && (
             <Link
               className="SinglePost--Pagination--Link prev"
               to={prevPostURL}
             >
-              Previous Post
+              Previous
             </Link>
           )}
           {nextPostURL && (
@@ -89,7 +75,7 @@ export const SinglePostTemplate = ({
               className="SinglePost--Pagination--Link next"
               to={nextPostURL}
             >
-              Next Post
+              Next
             </Link>
           )}
         </div>
