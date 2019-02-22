@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: Meeting Glue
-featuredImage: /images/uploads/nitish-meena-37745.jpg
+featuredImage: /images/uploads/oak-1.png
 subtitle: Connecting planners and suppliers.
 reviews:
   review1body: >-
