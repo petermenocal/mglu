@@ -155,22 +155,41 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
+
           - {
-              label: Review,
-              name: review,
-              widget: markdown,
+              label: Review1 Property,
+              name: review1property,
+              widget: string,
               default: '"Our high-level guest speaker (Joe Biden) had access to the ballroom from a secret stairwell from the back of the hotel! Secret Service was very familiar with the property. This place is built for VIPs!"',
             }
           - {
-              label: Review2,
-              name: review2,
-              widget: markdown,
+              label: Review1 Body,
+              name: review1body,
+              widget: string,
               default: '"Our high-level guest speaker (Joe Biden) had access to the ballroom from a secret stairwell from the back of the hotel! Secret Service was very familiar with the property. This place is built for VIPs!"',
             }
           - {
-              label: Review3,
-              name: review3,
-              widget: markdown,
+              label: Review2 Property,
+              name: review2property,
+              widget: string,
+              default: '"Our high-level guest speaker (Joe Biden) had access to the ballroom from a secret stairwell from the back of the hotel! Secret Service was very familiar with the property. This place is built for VIPs!"',
+            }
+          - {
+              label: Review2 Body,
+              name: review2body,
+              widget: string,
+              default: '"Our high-level guest speaker (Joe Biden) had access to the ballroom from a secret stairwell from the back of the hotel! Secret Service was very familiar with the property. This place is built for VIPs!"',
+            }
+          - {
+              label: Review3 Property,
+              name: review3property,
+              widget: string,
+              default: '"Our high-level guest speaker (Joe Biden) had access to the ballroom from a secret stairwell from the back of the hotel! Secret Service was very familiar with the property. This place is built for VIPs!"',
+            }
+          - {
+              label: Review3 Body,
+              name: review3body,
+              widget: string,
               default: '"Our high-level guest speaker (Joe Biden) had access to the ballroom from a secret stairwell from the back of the hotel! Secret Service was very familiar with the property. This place is built for VIPs!"',
             }
           - label: 'Meta'
