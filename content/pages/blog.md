@@ -1,8 +1,8 @@
 ---
 template: BlogIndex
 slug: blog
-title: Blog
-featuredImage: /images/uploads/ng-32703.jpg
-subtitle: Blog subtitle
+title: CVBs + Hotels
+featuredImage: /images/uploads/all.png
+subtitle: Easily connect with Convention Visitor Bureaus and Hotels.
 ---
 
