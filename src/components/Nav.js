@@ -38,10 +38,10 @@ export default class Nav extends Component {
             <NavLink to="/" exact>
               Home
             </NavLink>
-            <NavLink to="/blog/" exact>
+            <NavLink to="/post-categories/hotels/" exact>
               Hotels
             </NavLink>
-            <NavLink to="/blog/" exact>
+            <NavLink to="/post-categories/cvbs/" exact>
               CVBs
             </NavLink>
             <NavLink to="/blog/" exact>
