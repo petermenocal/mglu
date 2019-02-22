@@ -2,6 +2,7 @@ import React from 'react'
 
 import PageHeader from '../components/PageHeader'
 import { Box, Flex, Heading, Card, Text } from 'rebass'
+import './HomePage.css'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({
@@ -22,51 +23,32 @@ export const HomePageTemplate = ({
     <section className="section">
       <div className="container">
         <div>Promotions</div>
-        <Flex flexDirection="row" alignItems="center" justifyContent="center">
-          <Box bg="rebeccapurple" width={[1]} p={3}>
-            <Heading color="#75b418">Invite a fellow planner</Heading>
-            <Flex
-              flexDirection="row"
-              alignItems="center"
-              justifyContent="space-between"
-            >
-              <Box width={[1, 1, 1 / 2]}>
-                <input
-                  style={{
-                    width: `90%`,
-                    background: `transparent`,
-                    border: `3px solid white`,
-                    padding: `1rem`,
-                    color: `white`
-                  }}
-                  type="text"
-                  placeholder="your name"
-                />
-              </Box>
-              <Box width={[1, 1, 1 / 2]}>
-                <input
-                  style={{
-                    width: `90%`,
-                    background: `transparent`,
-                    border: `3px solid white`,
-                    padding: `1rem`,
-                    color: `white`
-                  }}
-                  type="text"
-                  placeholder="their email address"
-                />
-              </Box>
-            </Flex>
-          </Box>
-        </Flex>
-        <Flex
-          bg="black"
-          p={3}
-          flexDirection="row"
-          flexWrap="wrap"
-          alignItems="center"
-          justifyContent="center"
-        >
+        <div className="HomePage--InviteAFellowPlanner">
+          <div className="HomePage--InviteAFellowPlanner--Heading">
+            <h1>Invite a fellow planner</h1>
+          </div>
+          <div className="HomePage--InviteAFellowPlanner--Input--Container">
+            <input
+              type="text"
+              placeholder="your name"
+              className="HomePage--InviteAFellowPlanner--Input"
+            />
+          </div>
+          <div className="HomePage--InviteAFellowPlanner--Input--Container">
+            <input
+              className="HomePage--InviteAFellowPlanner--Input"
+              type="text"
+              placeholder="their email"
+            />
+          </div>
+          <div className="HomePage--InviteAFellowPlanner--Input--Container">
+            <button className="HomePage--InviteAFellowPlanner--Button">
+              Send invitation
+            </button>
+          </div>
+        </div>
+
+        <div className="HomePage--Reviews">
           <Box width={[1, 1, 1 / 2]}>
             <Heading fontSize={2} color="#ffa500">
               Reviews
@@ -101,7 +83,7 @@ export const HomePageTemplate = ({
               </Text>
             </Card>
           </Box>
-        </Flex>
+        </div>
         <Flex
           bg="whitesmoke"
           p={3}
