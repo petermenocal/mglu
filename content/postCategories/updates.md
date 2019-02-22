@@ -2,6 +2,6 @@
 template: BlogIndex
 title: CVBs
 subtitle: ''
-featuredImage: /images/uploads/demo-hero-index.png
+featuredImage: /images/uploads/cvb.png
 ---
 
