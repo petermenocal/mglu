@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import { Menu, X } from 'react-feather'
+import Login from './Login'
 
 import Logo from './Logo'
 import './Nav.css'
@@ -44,9 +45,7 @@ export default class Nav extends Component {
             <NavLink to="/post-categories/cv-bs/" exact>
               CVBs
             </NavLink>
-            <NavLink to="/contact/" exact>
-              Login
-            </NavLink>
+            <Login />
           </div>
           <button
             className="Button-blank Nav--MenuButton"

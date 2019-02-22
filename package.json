@@ -3,6 +3,7 @@
   "description": "An opinionated starter project for creating lightning-fast websites with Gatsby and Netlify CMS",
   "version": "1.0.0",
   "dependencies": {
+    "auth0-js": "^9.10.0",
     "date-fns": "^1.29.0",
     "dom-form-serializer": "^1.0.7",
     "gatsby": "^1",
