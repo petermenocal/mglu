@@ -162,25 +162,40 @@ collections: # A list of collections the CMS should be able to edit
               - {
                   label: Review 1 Property,
                   name: review1property,
+                  required: true,
                   widget: string,
                 }
               - {
                   label: Review 1 Body,
                   name: review1body,
                   widget: text,
-                  required: false,
+                  required: true,
                   pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Review 2 Property,
-                  name: review1property,
+                  name: review2property,
+                  required: true,
                   widget: string,
                 }
               - {
                   label: Review 2 Body,
                   name: review2body,
                   widget: text,
-                  required: false,
+                  required: true,
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
+                }
+              - {
+                  label: Review 3 Property,
+                  name: review3property,
+                  required: true,
+                  widget: string,
+                }
+              - {
+                  label: Review 3 Body,
+                  name: review3body,
+                  widget: text,
+                  required: true,
                   pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
 
