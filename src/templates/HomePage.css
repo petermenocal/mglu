@@ -46,11 +46,47 @@
 .HomePage--Reviews {
   background: black;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 2rem;
+}
+
+.HomePage--Reviews--Container {
+  width: 100%;
+}
+
+.HomePage--PromoBoxes--Container {
+  display: flex;
+  background: whitesmoke;
+  color: black;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.HomePage--PromoBoxes--Category {
+  padding: 2rem;
+  width: 33.3%;
+}
+
+.HomePage--PromoBox--Opening {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://meetingglue.herokuapp.com/_nuxt/img/14b7322.png");
+  background-size: cover;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  color: white;
 }
 @media (min-width: 600px) {
   .HomePage--InviteAFellowPlanner--Input--Container {
     width: 50%;
     padding: 0 2rem;
+  }
+
+  .HomePage--Reviews--Container {
+    width: 50%;
   }
 }

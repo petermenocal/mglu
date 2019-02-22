@@ -12,7 +12,17 @@
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
-
+.primary {
+  color: var(--primary);
+}
+.accent {
+  color: var(--accent);
+}
+.card {
+  background: whitesmoke;
+  padding: 2rem;
+  color: black;
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;

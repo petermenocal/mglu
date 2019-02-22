@@ -49,74 +49,68 @@ export const HomePageTemplate = ({
         </div>
 
         <div className="HomePage--Reviews">
-          <Box width={[1, 1, 1 / 2]}>
-            <Heading fontSize={2} color="#ffa500">
-              Reviews
-            </Heading>
-            <Card p={3}>
-              <Heading color="#70ac17">{reviews.review1property}</Heading>
-              <Text color="lightgrey">{reviews.review1body}</Text>
-            </Card>
-            <Card p={3}>
-              <Heading color="#70ac17">{reviews.review2property}</Heading>
-              <Text color="lightgrey">{reviews.review2body}</Text>
-            </Card>
-            <Card p={3}>
-              <Heading color="#70ac17">{reviews.review3property}</Heading>
-              <Text color="lightgrey">{reviews.review3body}</Text>
-            </Card>
-          </Box>
-          <Box width={[1, 1, 1 / 2]} mt={[5, 0]}>
-            <Heading fontSize={2} color="#ffa500">
-              Industry News
-            </Heading>
-            <Card p={3} bg="whitesmoke" mb="3">
-              <Heading color="#70ac17">
-                Pulvinar molestie consequat montes
-              </Heading>
-              <img src="//placehold.it/400x200" width="100%" />
-              <Text color="black">
-                Molestie sapien mus curae facilisi placerat vestibulum torquent
-                ultrices, ridiculus pellentesque in sodales ac senectus potenti
-                lobortis adipiscing, felis posuere massa nascetur tellus magna
-                tincidunt.
-              </Text>
-            </Card>
-          </Box>
+          <div className="HomePage--Reviews--Container">
+            <h1 className="accent">Reviews</h1>
+            <div>
+              <h1 className="primary">{reviews.review1property}</h1>
+              <p>{reviews.review1body}</p>
+            </div>
+            <div>
+              <h1 className="primary">{reviews.review2property}</h1>
+              <p>{reviews.review2body}</p>
+            </div>
+            <div>
+              <h1 className="primary">{reviews.review3property}</h1>
+              <p>{reviews.review3body}</p>
+            </div>
+          </div>
+          <div className="HomePage--Reviews--Container">
+            <h1 className="accent">Industry News</h1>
+            <div className="card">
+              <img src="//placehold.it/400x100" width="100%" height="auto" />
+              <h2>
+                Ornare tempus consequat ante primis tellus condimentum
+                parturient luctus, nibh dui nullam netus dapibus ultricies erat
+                odio, sapien ad tempor facilisis mollis eu pharetra.
+              </h2>
+              <p>
+                Venenatis penatibus senectus fermentum blandit himenaeos
+                pulvinar dictumst magna, mollis tempus enim curabitur facilisi
+                sagittis consequat, nisl in nostra facilisis interdum faucibus
+                purus.
+              </p>
+            </div>
+          </div>
         </div>
-        <Flex
-          bg="whitesmoke"
-          p={3}
-          flexDirection="row"
-          flexWrap="wrap"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Box width={[1, 1, 1 / 3]}>
-            <Heading fontSize={2} color="rebeccapurple">
-              Featured property
-            </Heading>
-            <Card p={3}>
-              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
-            </Card>
-          </Box>
-          <Box width={[1, 1, 1 / 3]}>
-            <Heading fontSize={2} color="rebeccapurple">
-              Hot Openings
-            </Heading>
-            <Card p={3}>
-              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
-            </Card>
-          </Box>
-          <Box width={[1, 1, 1 / 3]}>
-            <Heading fontSize={2} color="rebeccapurple">
-              Polls
-            </Heading>
-            <Card p={3}>
-              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
-            </Card>
-          </Box>
-        </Flex>
+        <div className="HomePage--PromoBoxes--Container">
+          <div className="HomePage--PromoBoxes--Category">
+            <h1 className="primary">Hot Openings</h1>
+            <div className="HomePage--PromoBox--Opening">
+              <h1>heading</h1>
+            </div>
+            <div className="HomePage--PromoBox--Opening">
+              <h1>heading</h1>
+            </div>
+            <div className="HomePage--PromoBox--Opening">
+              <h1>heading</h1>
+            </div>
+          </div>
+          <div className="HomePage--PromoBoxes--Category">
+            <h1 className="primary">Hot Openings</h1>
+            <div className="HomePage--PromoBox--Opening">
+              <h1>heading</h1>
+            </div>
+            <div className="HomePage--PromoBox--Opening">
+              <h1>heading</h1>
+            </div>
+            <div className="HomePage--PromoBox--Opening">
+              <h1>heading</h1>
+            </div>
+          </div>
+          <div className="HomePage--PromoBoxes--Category">
+            <h1 className="primary">Polls</h1>
+          </div>
+        </div>
       </div>
     </section>
   </main>
