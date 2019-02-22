@@ -1,8 +1,6 @@
-siteTitle: Gatsbro
-siteUrl: 'https://gatsbro.netlify.com'
-siteDescription: >-
-  A starter project for creating lightning-fast websites with Gatsby Netlify CMS.
+siteTitle: Meeting Glue
+siteUrl: 'https://mglue.netlify.com'
+siteDescription: Meeting Glue Description
 socialMediaCard:
   image: /images/uploads/card-og.png
-headerScripts: |-
-  <!-- Add your analytics scripts / verification meta here -->
+headerScripts: <!-- Add your analytics scripts / verification meta here -->
