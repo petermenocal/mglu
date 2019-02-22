@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
+import { Box, Flex, Heading, Card, Text } from 'rebass'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
@@ -15,7 +15,135 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
 
     <section className="section">
       <div className="container">
-        <Content source={body} />
+        <div>Promotions</div>
+        <Flex flexDirection="row" alignItems="center" justifyContent="center">
+          <Box bg="rebeccapurple" width={[1]} p={3}>
+            <Heading color="#75b418">Invite a fellow planner</Heading>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Box width={[1, 1, 1 / 2]}>
+                <input
+                  style={{
+                    width: `90%`,
+                    background: `transparent`,
+                    border: `3px solid white`,
+                    padding: `1rem`,
+                    color: `white`
+                  }}
+                  type="text"
+                  placeholder="your name"
+                />
+              </Box>
+              <Box width={[1, 1, 1 / 2]}>
+                <input
+                  style={{
+                    width: `90%`,
+                    background: `transparent`,
+                    border: `3px solid white`,
+                    padding: `1rem`,
+                    color: `white`
+                  }}
+                  type="text"
+                  placeholder="their email address"
+                />
+              </Box>
+            </Flex>
+          </Box>
+        </Flex>
+        <Flex
+          bg="black"
+          p={3}
+          flexDirection="row"
+          flexWrap="wrap"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Box width={[1, 1, 1 / 2]}>
+            <Heading fontSize={2} color="#ffa500">
+              Reviews
+            </Heading>
+            <Card p={3}>
+              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
+              <Text color="lightgrey">
+                "Our high-level guest speaker (Joe Biden) had access to the
+                ballroom from a secret stairwell from the back of the hotel!
+                Secret Service was very familiar with the property. This place
+                is built for VIPs!"
+              </Text>
+            </Card>
+            <Card p={3}>
+              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
+              <Text color="lightgrey">
+                "Our high-level guest speaker (Joe Biden) had access to the
+                ballroom from a secret stairwell from the back of the hotel!
+                Secret Service was very familiar with the property. This place
+                is built for VIPs!"
+              </Text>
+            </Card>
+            <Card p={3}>
+              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
+              <Text color="lightgrey">
+                "Our high-level guest speaker (Joe Biden) had access to the
+                ballroom from a secret stairwell from the back of the hotel!
+                Secret Service was very familiar with the property. This place
+                is built for VIPs!"
+              </Text>
+            </Card>
+          </Box>
+          <Box width={[1, 1, 1 / 2]} mt={[5, 0]}>
+            <Heading fontSize={2} color="#ffa500">
+              Industry News
+            </Heading>
+            <Card p={3} bg="whitesmoke" mb="3">
+              <Heading color="#70ac17">
+                Pulvinar molestie consequat montes
+              </Heading>
+              <img src="//placehold.it/400x200" width="100%" />
+              <Text color="black">
+                Molestie sapien mus curae facilisi placerat vestibulum torquent
+                ultrices, ridiculus pellentesque in sodales ac senectus potenti
+                lobortis adipiscing, felis posuere massa nascetur tellus magna
+                tincidunt.
+              </Text>
+            </Card>
+          </Box>
+        </Flex>
+        <Flex
+          bg="whitesmoke"
+          p={3}
+          flexDirection="row"
+          flexWrap="wrap"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Box width={[1, 1, 1 / 3]}>
+            <Heading fontSize={2} color="rebeccapurple">
+              Featured property
+            </Heading>
+            <Card p={3}>
+              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
+            </Card>
+          </Box>
+          <Box width={[1, 1, 1 / 3]}>
+            <Heading fontSize={2} color="rebeccapurple">
+              Hot Openings
+            </Heading>
+            <Card p={3}>
+              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
+            </Card>
+          </Box>
+          <Box width={[1, 1, 1 / 3]}>
+            <Heading fontSize={2} color="rebeccapurple">
+              Polls
+            </Heading>
+            <Card p={3}>
+              <Heading color="#70ac17">Hyatt Regency Washington</Heading>
+            </Card>
+          </Box>
+        </Flex>
       </div>
     </section>
   </main>
