@@ -1,7 +1,7 @@
 ---
 template: BlogIndex
-title: News
+title: Hotels
 subtitle: ''
-featuredImage: /images/uploads/wade-meng-381499.jpg
+featuredImage: /images/uploads/demo-hero-hotels.png
 ---
 
