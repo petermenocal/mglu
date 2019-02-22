@@ -41,11 +41,8 @@ export default class Nav extends Component {
             <NavLink to="/post-categories/hotels/" exact>
               Hotels
             </NavLink>
-            <NavLink to="/post-categories/cvbs/" exact>
+            <NavLink to="/post-categories/cv-bs/" exact>
               CVBs
-            </NavLink>
-            <NavLink to="/blog/" exact>
-              Blog
             </NavLink>
             <NavLink to="/contact/" exact>
               Login
