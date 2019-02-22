@@ -9,12 +9,7 @@ export const HomePageTemplate = ({
   subtitle,
   featuredImage,
   body,
-  review1property,
-  review1body,
-  review2property,
-  review2body,
-  review3property,
-  review3body
+  reviews
 }) => (
   <main className="Home">
     <PageHeader
@@ -77,16 +72,16 @@ export const HomePageTemplate = ({
               Reviews
             </Heading>
             <Card p={3}>
-              <Heading color="#70ac17">{review1property}</Heading>
-              <Text color="lightgrey">{review1body}</Text>
+              <Heading color="#70ac17">{reviews.review1property}</Heading>
+              <Text color="lightgrey">{reviews.review1body}</Text>
             </Card>
             <Card p={3}>
-              <Heading color="#70ac17">{review2property}</Heading>
-              <Text color="lightgrey">{review2body}</Text>
+              <Heading color="#70ac17">{reviews.review2property}</Heading>
+              <Text color="lightgrey">{reviews.review2body}</Text>
             </Card>
             <Card p={3}>
-              <Heading color="#70ac17">{review3property}</Heading>
-              <Text color="lightgrey">{review3body}</Text>
+              <Heading color="#70ac17">{reviews.review3property}</Heading>
+              <Text color="lightgrey">{reviews.review3body}</Text>
             </Card>
           </Box>
           <Box width={[1, 1, 1 / 2]} mt={[5, 0]}>
@@ -163,12 +158,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        review1property
-        review1body
-        review2property
-        review2body
-        review3property
-        review3body
+        reviews {
+          review1property
+          review1body
+          review2property
+          review2body
+          review3property
+          review3body
+        }
         featuredImage {
           ...FluidImage
         }
