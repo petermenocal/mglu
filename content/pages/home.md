@@ -2,8 +2,8 @@
 template: HomePage
 slug: ''
 title: Meeting Glue
-featuredImage: /images/uploads/oak-1.png
-subtitle: Where planners and suppliers connect.
+featuredImage: /images/uploads/nitish-meena-37745.jpg
+subtitle: Connecting planners and suppliers.
 meta:
   title: ''
 ---
