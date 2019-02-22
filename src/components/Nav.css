@@ -1,9 +1,9 @@
 .Nav {
-  background: white;
+  background: black;
+  color: var(--primary);
   position: sticky;
   top: 0;
   z-index: 1;
-  border-bottom: 1px solid var(--lightGrey);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025);
 }
 
@@ -47,7 +47,7 @@
 .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {
-  color: var(--primary);
+  color: var(--accent);
   border-bottom-color: currentColor;
 }
 
@@ -58,6 +58,7 @@
 
   .Nav--MenuButton {
     display: block;
+    color: white;
     margin-left: auto;
     z-index: 1;
   }
@@ -75,7 +76,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: white;
+    background: var(--primary);
     animation: Nav--Links 0.2s ease;
   }
 

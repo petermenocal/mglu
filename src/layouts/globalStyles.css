@@ -1,11 +1,14 @@
 :root {
-  --primary: rebeccapurple;
+  --primary: #7fc31a;
   --secondary: #212121;
+  --background: #343359;
   --lightGrey: whitesmoke;
+  --accent: #f1c200;
+  --green: #75b418;
   --midGrey: #cacaca;
   --darkGrey: #272727;
   --danger: #ff3d3d;
-  --font-primary: 'Open Sans', sans-serif;
+  --font-primary: "Open Sans", sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
@@ -21,8 +24,8 @@ body {
   font-family: var(--font-system);
   min-height: 100%;
   position: relative;
-  background: white;
-  color: var(--secondary);
+  background: var(--background);
+  color: var(--lightGrey);
   font-size: 1.6em;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -70,7 +73,7 @@ code {
 code:before,
 code:after {
   letter-spacing: -0.2em;
-  content: '\00a0';
+  content: "\00a0";
 }
 pre code {
   font-size: inherit;

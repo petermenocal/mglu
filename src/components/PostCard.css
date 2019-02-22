@@ -1,18 +1,17 @@
 .PostCard {
   text-decoration: none;
   background: white;
-  color: inherit;
-  border: 1px solid var(--lightGrey);
+  color: var(--secondary);
   border-radius: var(--borderRadius);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-out;
   overflow: hidden;
 }
 
 .PostCard:hover,
 .PostCard:focus {
   transform: translateY(-1px);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
 }
 
 .PostCard--Image {

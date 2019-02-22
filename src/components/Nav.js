@@ -38,17 +38,17 @@ export default class Nav extends Component {
             <NavLink to="/" exact>
               Home
             </NavLink>
-            <NavLink to="/about/" exact>
-              About
+            <NavLink to="/blog/" exact>
+              Hotels
+            </NavLink>
+            <NavLink to="/blog/" exact>
+              CVBs
             </NavLink>
             <NavLink to="/blog/" exact>
               Blog
             </NavLink>
-            <NavLink to="/default/" exact>
-              Default
-            </NavLink>
             <NavLink to="/contact/" exact>
-              Contact
+              Login
             </NavLink>
           </div>
           <button
