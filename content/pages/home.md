@@ -1,9 +1,11 @@
 ---
 template: HomePage
 slug: ''
-title: Hello World!
-featuredImage: /images/uploads/colour.jpg
-subtitle: This is the home page subtitle test
+title: Meeting Glue
+featuredImage: /images/uploads/oak-1.png
+subtitle: Where planners and suppliers connect.
 meta:
   title: ''
 ---
+## Promotions
+
