@@ -4,28 +4,12 @@ slug: ''
 title: Meeting Glue
 featuredImage: /images/uploads/nitish-meena-37745.jpg
 subtitle: Connecting planners and suppliers.
-review: >-
-  # Hyatt Regency Washington
-
-
-  "Our high-level guest speaker (Joe Biden) had access to the ballroom from a
-  secret stairwell from the back of the hotel! Secret Service was very familiar
-  with the property. This place is built for VIPs!"
-review2: >-
-  # Hyatt Regency Washington
-
-
-  "Our high-level guest speaker (Joe Biden) had access to the ballroom from a
-  secret stairwell from the back of the hotel! Secret Service was very familiar
-  with the property. This place is built for VIPs!"
-review3: >-
-  # Hyatt Regency Washington
-
-
-  "Our high-level guest speaker (Joe Biden) had access to the ballroom from a
-  secret stairwell from the back of the hotel! Secret Service was very familiar
-  with the property. This place is built for VIPs!"
+review1property: A
+review1body: A
+review2property: A
+review2body: A
+review3property: A
+review3body: A
 meta:
   title: ''
 ---
-
