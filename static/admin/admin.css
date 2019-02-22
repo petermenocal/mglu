@@ -54,10 +54,10 @@
 /* Custom logo */
 
 .nc-githubAuthenticationPage-logo {
-  background-image: url(/images/logo.svg);
+  background-image: url(/images/logo.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100px;
+  background-size: 300px;
 }
 
 .nc-githubAuthenticationPage-logo svg {
@@ -71,7 +71,7 @@
 }
 
 .nc-githubAuthenticationPage-button:after {
-  content: 'Login';
+  content: "Login";
   display: block;
   position: absolute;
   left: 50%;
