@@ -2,6 +2,6 @@
 template: BlogIndex
 title: Hotels
 subtitle: ''
-featuredImage: /images/uploads/demo-hero-hotels.png
+featuredImage: /images/uploads/export.png
 ---
 
