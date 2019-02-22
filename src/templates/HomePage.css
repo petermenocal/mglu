@@ -1,0 +1,12 @@
+.HomePage {
+}
+.HomePage--InviteAFellowPlanner {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background: rebeccapurple;
+  color: var(--accent);
+  padding: 2rem;
+}

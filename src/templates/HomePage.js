@@ -4,7 +4,15 @@ import PageHeader from '../components/PageHeader'
 import { Box, Flex, Heading, Card, Text } from 'rebass'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
+export const HomePageTemplate = ({
+  title,
+  subtitle,
+  featuredImage,
+  body,
+  review,
+  review2,
+  review3
+}) => (
   <main className="Home">
     <PageHeader
       large
@@ -67,30 +75,15 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
             </Heading>
             <Card p={3}>
               <Heading color="#70ac17">Hyatt Regency Washington</Heading>
-              <Text color="lightgrey">
-                "Our high-level guest speaker (Joe Biden) had access to the
-                ballroom from a secret stairwell from the back of the hotel!
-                Secret Service was very familiar with the property. This place
-                is built for VIPs!"
-              </Text>
+              <Text color="lightgrey">{review}</Text>
             </Card>
             <Card p={3}>
               <Heading color="#70ac17">Hyatt Regency Washington</Heading>
-              <Text color="lightgrey">
-                "Our high-level guest speaker (Joe Biden) had access to the
-                ballroom from a secret stairwell from the back of the hotel!
-                Secret Service was very familiar with the property. This place
-                is built for VIPs!"
-              </Text>
+              <Text color="lightgrey">{review2}</Text>
             </Card>
             <Card p={3}>
               <Heading color="#70ac17">Hyatt Regency Washington</Heading>
-              <Text color="lightgrey">
-                "Our high-level guest speaker (Joe Biden) had access to the
-                ballroom from a secret stairwell from the back of the hotel!
-                Secret Service was very familiar with the property. This place
-                is built for VIPs!"
-              </Text>
+              <Text color="lightgrey">{review3}</Text>
             </Card>
           </Box>
           <Box width={[1, 1, 1 / 2]} mt={[5, 0]}>
@@ -167,6 +160,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+        review
+        review2
+        review3
         featuredImage {
           ...FluidImage
         }
