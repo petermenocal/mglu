@@ -2,6 +2,7 @@
 template: Hotel
 title: 'Jack London Inn '
 status: Published
+featuredImage: /images/uploads/all.png
 categories:
   - category: Hotels
 hotelInfo:

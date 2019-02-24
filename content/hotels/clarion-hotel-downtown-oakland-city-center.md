@@ -2,6 +2,7 @@
 template: Hotel 
 title: Clarion Hotel Downtown Oakland City Center
 status: Published
+featuredImage: /images/uploads/all.png
 categories:
   - category: Hotels
 hotelInfo:

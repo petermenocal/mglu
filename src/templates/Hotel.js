@@ -366,6 +366,82 @@ export const HotelPostTemplate = ({
           <div>Twitter</div>
         </div>
 
+        {body && (
+          <section className="SinglePost--InnerContent">
+            <div className="container">
+              <Content source={body} />
+            </div>
+          </section>
+        )}
+
+        <div className="SinglePost--Events">
+          {title && (
+            <h1 className="SinglePost--Title" itemProp="title">
+              Events near {title}
+            </h1>
+          )}
+          <div className="SinglePost--Events--Event">
+            <img src="//placehold.it/200x200" />
+            <div>
+              <h1>Event Name</h1>
+              <p>
+                Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
+                pellentesque, taciti felis nam etiam luctus semper leo natoque
+                finibus, maecenas proin sapien lacinia sit condimentum dictumst
+                sodales.
+              </p>
+            </div>
+          </div>
+          <div className="SinglePost--Events--Event">
+            <img src="//placehold.it/200x200" />
+            <div>
+              <h1>Event Name</h1>
+              <p>
+                Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
+                pellentesque, taciti felis nam etiam luctus semper leo natoque
+                finibus, maecenas proin sapien lacinia sit condimentum dictumst
+                sodales.
+              </p>
+            </div>
+          </div>
+          <div className="SinglePost--Events--Event">
+            <img src="//placehold.it/200x200" />
+            <div>
+              <h1>Event Name</h1>
+              <p>
+                Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
+                pellentesque, taciti felis nam etiam luctus semper leo natoque
+                finibus, maecenas proin sapien lacinia sit condimentum dictumst
+                sodales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {hotelInfo.address && (
+          <section className="SinglePost--SideBySide">
+            <div>
+              <img
+                src={`https://maps.googleapis.com/maps/api/streetview?size=1000x500&location=${
+                  hotelInfo.address
+                }+${hotelInfo.city}+${
+                  hotelInfo.state
+                }&key=AIzaSyDFNHiqNqTY71ndy21IcODVX2MikRJZWmg`}
+                width="100%"
+                height="auto"
+              />
+            </div>
+            <iframe
+              src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDFNHiqNqTY71ndy21IcODVX2MikRJZWmg&q=${
+                hotelInfo.address
+              }+${hotelInfo.city}+${hotelInfo.state}`}
+              allowfullscreen="allowfullscreen"
+              style={{ border: `0px none` }}
+              frameborder="0"
+            />
+          </section>
+        )}
+
         <div className="SinglePost--Pagination">
           {prevPostURL && (
             <Link

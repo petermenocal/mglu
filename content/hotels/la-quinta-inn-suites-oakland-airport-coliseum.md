@@ -2,6 +2,7 @@
 template: Hotel
 title: 'La Quinta Inn & Suites Oakland Airport Coliseum '
 status: Published
+featuredImage: /images/uploads/all.png
 categories:
   - category: Hotels
 hotelInfo:

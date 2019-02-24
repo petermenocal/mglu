@@ -2,6 +2,7 @@
 template: Hotel
 title: Executive Inn & Suites Embarcadero Cove
 status: Published
+featuredImage: /images/uploads/all.png
 categories:
   - category: Hotels
 hotelInfo:

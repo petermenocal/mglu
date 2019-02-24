@@ -2,6 +2,7 @@
 template: Hotel
 title: 'Homewood Suites Oakland-Waterfront '
 status: Published
+featuredImage: /images/uploads/all.png
 categories:
   - category: Hotels
 hotelInfo:
