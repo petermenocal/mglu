@@ -143,22 +143,21 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-  - name: posts
-    label: Post
+  - name: cvbs
+    label: Cvb
     editor:
       preview: true
-    folder: content/posts
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
+    folder: content/cvbs
+    slug: "{{slug}}"
+    create: true
+    fields:
       - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: Title, name: title, widget: string }
+      - { label: Name, name: title, widget: string }
       - label: "Status"
         name: "status"
         widget: "select"
         options: ["Published", "Featured", "Draft"]
         default: "Published"
-      - { label: Date / Order, name: date, widget: date }
       - {
           label: Featured Image,
           name: featuredImage,
@@ -166,142 +165,6 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
       - { label: Content, name: body, widget: markdown }
-      - label: "Categories"
-        name: "categories"
-        widget: "list"
-        required: false
-        fields:
-          - label: "Category"
-            name: "category"
-            widget: "relation"
-            collection: "postCategories"
-            searchFields: ["title"]
-            valueField: "title"
-      - label: "Hotel info"
-        required: false
-        name: "hotelInfo"
-        widget: "object"
-        fields:
-          - { label: Address, name: address, widget: string }
-          - { label: City, name: city, widget: string }
-          - { label: Closest Airport, name: closestAirport, widget: string }
-          - label: "CVB Member?"
-            name: "cvbMember"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - { label: "Diamond amount", name: diamonds, widget: string }
-          - {
-              label: Director of Catering,
-              name: directorCatering,
-              widget: string,
-            }
-          - { label: Director of Sales, name: direcotSales, widget: string }
-          - label: "Fitness Center"
-            name: "fitnessCenter"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - { label: General Email, name: generalEmail, widget: string }
-          - { label: Largest room 1 (sqft), name: largestRoom1, widget: number }
-          - { label: Largest room 2 (sqft), name: largestRoom2, widget: number }
-          - {
-              label: Loyalty program name,
-              name: loyaltyProgramName,
-              widget: string,
-            }
-          - {
-              label: Number of meeting rooms,
-              name: meetingRoomsAmount,
-              widget: number,
-            }
-          - { label: Logo, name: logo, widget: image, required: false }
-          - {
-              label: "Parking fee: self",
-              name: parkingFeeSelf,
-              widget: number,
-              min: 0,
-            }
-          - {
-              label: "Parking fee: valet",
-              name: parkingFeeValet,
-              widget: number,
-              min: 0,
-            }
-          - label: "Is there a pool?"
-            name: "hasPool"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - label: "Is the pool indoors?"
-            name: "hasPoolIndoors"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - label: "Is there a spa?"
-            name: "hasSpa"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - label: "Public Wifi fee"
-            name: "publicWifiFee"
-            widget: "number"
-          - label: "Resort fee"
-            name: "resortFee"
-            widget: "number"
-          - label: "Rooms tax percentage"
-            name: "roomsTaxPercent"
-            widget: "number"
-          - label: "Sales email"
-            name: "salesEmail"
-            widget: "string"
-          - { label: Sales tax, name: salesTax, widget: number }
-          - {
-              label: Sales telephone number,
-              name: salesTelephone,
-              widget: string,
-            }
-          - {
-              label: Service charge percent,
-              name: serviceChargePercent,
-              widget: number,
-            }
-          - {
-              label: Number of sleeping rooms,
-              name: numberOfSleepingRooms,
-              widget: number,
-            }
-          - { label: Number of Suites, name: numberOfSuites, widget: number }
-          - { label: Telepbone, name: telephone, widget: string }
-          - { label: Twitter Username, name: twitter, widget: string }
-          - { label: Website address, name: website, widget: string }
-          - { label: zip, name: zip, widget: string }
-
-      - label: "Meta"
-        required: false
-        name: "meta"
-        widget: "object"
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - {
-              label: Description,
-              name: description,
-              widget: text,
-              required: false,
-              pattern: [".{,300}", "Must not exceed 300 characters"],
-            }
-          - {
-              label: Canonical Link,
-              name: canonicalLink,
-              widget: string,
-              required: false,
-            }
-          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: hotels
     label: Hotel
@@ -312,7 +175,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: Title, name: title, widget: string }
+      - { label: Name, name: title, widget: string }
       - label: "Status"
         name: "status"
         widget: "select"

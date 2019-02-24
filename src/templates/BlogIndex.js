@@ -93,7 +93,7 @@ export const pageQuery = graphql`
     }
 
     posts: allMarkdownRemark(
-      filter: { fields: { contentType: { regex: "/^(posts|hotels)$/" } } }
+      filter: { fields: { contentType: { regex: "/^(cvbs|hotels)$/" } } }
     ) {
       edges {
         node {
