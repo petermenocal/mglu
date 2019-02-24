@@ -1,6 +1,8 @@
 ---
 template: SinglePost
 title: ' Oakland Convention and Vistors Bureau'
+categories:
+  - category: CVBs
 status: Published
 cvbInfo:
   address: '481 Water Street Oakland, CA'
