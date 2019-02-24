@@ -1,6 +1,8 @@
 ---
 template: SinglePost
 title: Boulder Convention and Visitors Bureau
+categories:
+  - category: CVBs
 status: Published
 cvbInfo:
   address: '2440 Pearl Street Boulder, CO'
