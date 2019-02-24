@@ -11,6 +11,7 @@ cvbInfo:
   conventionCenter: Oakland Convention Center
   hotelInventory: 4000 sleeping rooms
   phone: 510-839-9000
+  twitter: LVCVA
   transporationCosts: |
     - Metro WMATA $3.00 one way
 ---

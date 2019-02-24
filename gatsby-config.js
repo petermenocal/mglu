@@ -24,7 +24,7 @@ module.exports = {
         name: 'pages'
       }
     },
-
+    'gatsby-plugin-twitter',
     // images
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

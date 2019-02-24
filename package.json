@@ -16,6 +16,7 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-plugin-sitemap": "^1.2.25",
+    "gatsby-plugin-twitter": "^2.0.9",
     "gatsby-remark-images": "^1.5.67",
     "gatsby-remark-relative-images": "^0.1.2",
     "gatsby-remark-responsive-iframe": "^1.4.20",
@@ -33,6 +34,7 @@
     "react-feather": "^1.1.0",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.3.2",
+    "react-twitter-embed": "^2.0.4",
     "rebass": "^3.0.1",
     "styled-components": "^4.1.3"
   },

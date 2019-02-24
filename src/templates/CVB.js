@@ -4,7 +4,7 @@ import _get from 'lodash/get'
 import _format from 'date-fns/format'
 import Link from 'gatsby-link'
 import { ChevronLeft } from 'react-feather'
-
+import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import Content from '../components/Content'
 import Image from '../components/Image'
 import './SinglePost.css'
@@ -98,23 +98,17 @@ export const CVBPostTemplate = ({
           className="SinglePost--InnerContent"
           style={{ background: `white`, color: `black` }}
         >
-          <h1>CVB Updates</h1>
-          <div className="container">
-            <Content source={body} />
-            <div>
-              <a
-                class="twitter-timeline"
-                href={`https://twitter.com/${
-                  cvbInfo.twitter
-                }?ref_src=twsrc%5Etfw`}
-              >
-                Tweets by {title}
-              </a>
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              />{' '}
+          <div className="container" style={{ display: `flex` }}>
+            <div style={{ width: `50%` }}>
+              <h1 className="primary">CVB Updates</h1>
+              <Content source={body} />
+            </div>
+            <div style={{ width: `50%` }}>
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName={cvbInfo.twitter}
+                options={{ height: 900 }}
+              />
             </div>
           </div>
         </section>

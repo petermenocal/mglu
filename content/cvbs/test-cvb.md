@@ -11,6 +11,7 @@ cvbInfo:
     * Ronald Reagan Washington National Airport
     * Washington Dulles International Airport 
   conventionCenter: None
+  twitter: LVCVA
   hotelInventory: '11,000 sleeping rooms'
   phone: 1-800-677-6267
   transporationCosts: |-
