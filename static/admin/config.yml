@@ -188,6 +188,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Hotel Inventory, name: hotelInventory, widget: string }
           - { label: Convention Center, name: conventionCenter, widget: string }
           - { label: Airports, name: airports, widget: markdown }
+          - { label: Twitter Username, name: twitter, widget: string }
           - {
               label: Transportation costs,
               name: transporationCosts,
