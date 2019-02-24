@@ -1,7 +1,8 @@
 ---
-template: Hotel 
+template: Hotel
 title: Best Western Plus Airport Inn & Suites
 status: Published
+featuredImage: /images/uploads/all.png
 categories:
   - category: Hotels
 hotelInfo:
