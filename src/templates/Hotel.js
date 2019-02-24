@@ -539,7 +539,7 @@ export const pageQuery = graphql`
 
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { regex: "/^(hotels)$/" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___title] }
     ) {
       edges {
         node {

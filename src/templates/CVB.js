@@ -66,7 +66,7 @@ export const CVBPostTemplate = ({
           <div>1</div>
           <div>
             <h6>Address</h6>
-            {cvbInfo.address && <p>{cvbInfo.address}</p>}
+            {cvbInfo.address & <p>{cvbInfo.address}</p>}
             <h6>Phone</h6>
             {cvbInfo.phone && <p>{cvbInfo.phone}</p>}
             <h6>Hotel inventory</h6>
@@ -148,7 +148,7 @@ export const pageQuery = graphql`
 
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { regex: "/^(cvbs)$/" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___title] }
     ) {
       edges {
         node {

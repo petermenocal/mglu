@@ -5,7 +5,6 @@ import './cms-utils'
 import { HomePageTemplate } from '../templates/HomePage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
-import { SinglePostTemplate } from '../templates/SinglePost'
 import { CVBTemplate } from '../templates/CVB'
 import { HotelTemplate } from '../templates/Hotel'
 
@@ -19,9 +18,6 @@ CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('posts', ({ entry }) => (
-  <SinglePostTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('hotels', ({ entry }) => (
   <HotelTemplate {...entry.toJS().data} />
