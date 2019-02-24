@@ -1,7 +1,18 @@
 ---
 template: SinglePost
-title: test cvb
+title: Las Vegas Convention and Visitors Authority
 status: Published
 featuredImage: /images/uploads/all.png
+cvbInfo:
+  address: '3150 Paradise Road Las Vegas, NV'
+  airports: |-
+    * Ronald Reagan Washington National Airport
+    * Washington Dulles International Airport 
+  conventionCenter: None
+  hotelInventory: '11,000 sleeping rooms'
+  phone: 1-800-677-6267
+  transporationCosts: |-
+    * Metro WMATA $3.00 one way
+    * Lyft/Uber $10-$15 one way
 ---
 test
