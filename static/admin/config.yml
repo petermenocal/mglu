@@ -205,6 +205,79 @@ collections: # A list of collections the CMS should be able to edit
               - { label: "Yes", value: true }
               - { label: "No", value: false }
           - { label: General Email, name: generalEmail, widget: string }
+          - { label: Largest room 1 (sqft), name: largestRoom1, widget: number }
+          - { label: Largest room 2 (sqft), name: largestRoom2, widget: number }
+          - {
+              label: Loyalty program name,
+              name: loyaltyProgramName,
+              widget: string,
+            }
+          - {
+              label: Number of meeting rooms,
+              name: meetingRoomsAmount,
+              widget: number,
+            }
+          - { label: Logo, name: logo, widget: image, required: false }
+          - {
+              label: "Parking fee: self",
+              name: parkingFeeSelf,
+              widget: number,
+              min: 0,
+            }
+          - {
+              label: "Parking fee: valet",
+              name: parkingFeeValet,
+              widget: number,
+              min: 0,
+            }
+          - label: "Is there a pool?"
+            name: "hasPool"
+            widget: "select"
+            options:
+              - { label: "Yes", value: true }
+              - { label: "No", value: false }
+          - label: "Is the pool indoors?"
+            name: "hasPoolIndoors"
+            widget: "select"
+            options:
+              - { label: "Yes", value: true }
+              - { label: "No", value: false }
+          - label: "Is there a spa?"
+            name: "hasSpa"
+            widget: "select"
+            options:
+              - { label: "Yes", value: true }
+              - { label: "No", value: false }
+          - label: "Public Wifi fee"
+            name: "publicWifiFee"
+            widget: "number"
+          - label: "Resort fee"
+            name: "resortFee"
+            widget: "number"
+          - label: "Rooms tax percentage"
+            name: "roomsTaxPercent"
+            widget: "number"
+          - label: "Sales email"
+            name: "salesEmail"
+            widget: "string"
+          - { label: Sales tax, name: salesTax, widget: number }
+          - {
+              label: Sales telephone number,
+              name: salesTelephone,
+              widget: string,
+            }
+          - {
+              label: Service charge percent,
+              name: serviceChargePercent,
+              widget: number,
+            }
+          - {
+              label: Number of sleeping rooms,
+              name: numberOfSleepingRooms,
+              widget: number,
+            }
+          - { label: Number of Suites, name: numberOfSuites, widget: number }
+
       - label: "Meta"
         required: false
         name: "meta"
