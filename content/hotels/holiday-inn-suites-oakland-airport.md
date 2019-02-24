@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: Hotel
 title: 'Holiday Inn & Suites Oakland - Airport '
 status: Published
 categories:
@@ -8,5 +8,5 @@ hotelInfo:
   address: '77 Hegenberger Road  '
   city: 'Oakland, CA'
 ---
- this is a article
-            
+
+this is a article

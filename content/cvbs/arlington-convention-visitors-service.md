@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: CVB 
 title: Arlington Convention & Visitors Service
 categories:
   - category: CVBs
@@ -12,4 +12,5 @@ cvbInfo:
   hotelInventory: '11,000 sleeping rooms'
   phone: 1-800-677-6267
 ---
+
 test

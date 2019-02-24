@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: CVB
 title: Las Vegas Convention and Visitors Authority
 categories:
   - category: CVBs
@@ -17,4 +17,5 @@ cvbInfo:
     * Metro WMATA $3.00 one way
     * Lyft/Uber $10-$15 one way
 ---
+
 test

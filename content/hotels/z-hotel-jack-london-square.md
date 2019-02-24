@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: Hotel
 title: 'Z Hotel Jack London Square '
 status: Published
 categories:
@@ -8,5 +8,5 @@ hotelInfo:
   address: '233 Broadway '
   city: 'Oakland, CA'
 ---
+
 this is a article
-   

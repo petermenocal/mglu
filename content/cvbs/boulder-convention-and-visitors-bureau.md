@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: CVB
 title: Boulder Convention and Visitors Bureau
 categories:
   - category: CVBs
@@ -12,4 +12,5 @@ cvbInfo:
   hotelInventory: 2000 Rooms
   phone: 303-442-2911
 ---
-test 
+
+test

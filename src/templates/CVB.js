@@ -9,7 +9,7 @@ import Content from '../components/Content'
 import Image from '../components/Image'
 import './SinglePost.css'
 
-export const SinglePostTemplate = ({
+export const CVBPostTemplate = ({
   title,
   date,
   featuredImage,
@@ -63,7 +63,7 @@ export const SinglePostTemplate = ({
         )}
 
         <div className="SinglePost--InfoPanel">
-          <div>1ff</div>
+          <div>1</div>
           <div>
             <h6>Address</h6>
             {cvbInfo.address && <p>{cvbInfo.address}</p>}
@@ -100,11 +100,11 @@ export const SinglePostTemplate = ({
 )
 
 // Export Default SinglePost for front-end
-const CVB = ({ data, pathContext }) => {
+const CVBPost = ({ data, pathContext }) => {
   const { post, allPosts } = data
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
-    <SinglePostTemplate
+    <CVBPostTemplate
       {...post}
       {...post.frontmatter}
       body={post.html}
@@ -114,14 +114,14 @@ const CVB = ({ data, pathContext }) => {
   )
 }
 
-export default CVB
+export default CVBPost
 
-export const CVBQuery = graphql`
+export const pageQuery = graphql`
   ## Query for SinglePost data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query CVBQuery($id: String!) {
+  query CVBPost($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
       html
       id
@@ -147,7 +147,7 @@ export const CVBQuery = graphql`
     }
 
     allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { regex: "/^(cvbs|hotels)$/" } } }
+      filter: { fields: { contentType: { regex: "/^(cvbs)$/" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

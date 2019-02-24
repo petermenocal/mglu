@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: CVB
 title: ' Oakland Convention and Vistors Bureau'
 categories:
   - category: CVBs
@@ -14,4 +14,3 @@ cvbInfo:
   transporationCosts: |
     - Metro WMATA $3.00 one way
 ---
- 

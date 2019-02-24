@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: Hotel
 title: 'Jack London Inn '
 status: Published
 categories:
@@ -8,5 +8,5 @@ hotelInfo:
   address: '444 Embarcadero West  '
   city: 'Oakland, CA'
 ---
- this is a article
-             
+
+this is a article

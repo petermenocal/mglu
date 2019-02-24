@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: Hotel
 title: 'Waterfront Hotel '
 status: Published
 categories:
@@ -8,5 +8,5 @@ hotelInfo:
   address: '10 Washington Street  '
   city: 'Oakland, CA'
 ---
- this is a article 
-                
+
+this is a article

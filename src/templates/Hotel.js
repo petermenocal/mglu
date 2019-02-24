@@ -9,7 +9,7 @@ import Content from '../components/Content'
 import Image from '../components/Image'
 import './SinglePost.css'
 
-export const SinglePostTemplate = ({
+export const HotelPostTemplate = ({
   title,
   date,
   featuredImage,
@@ -37,61 +37,37 @@ export const SinglePostTemplate = ({
       />
     )}
 
-    <div className="container">
+    <div className="container skinny">
       <Link className="SinglePost--BackButton" to="/blog/">
         <ChevronLeft /> BACK
       </Link>
       <div className="SinglePost--Content relative">
-        <div className="SinglePost--TitleBar">
-          <div className="SinglePost--TitleBar--Title">
-            <div className="SinglePost--Meta">
-              {categories && (
-                <Fragment>
-                  {categories.map((cat, index) => (
-                    <span
-                      key={cat.category}
-                      className="SinglePost--Meta--Category"
-                    >
-                      {cat.category}
-                      {/* Add a comma on all but last category */}
-                      {index !== categories.length - 1 ? ',' : ''}
-                    </span>
-                  ))}
-                </Fragment>
-              )}
-            </div>
-            {title && (
-              <h1 className="SinglePost--Title" itemProp="title">
-                {title}
-              </h1>
-            )}
-          </div>
-          <div className="SinglePost--Title--Address">
-            <div className="SinglePost--Meta">
-              <span className="SinglePost--Meta--Category">Address</span>
-            </div>
-            {hotelInfo.address && (
-              <h1 className="SinglePost--Title">{hotelInfo.address}</h1>
-            )}
-          </div>
+        <div className="SinglePost--Meta">
+          {categories && (
+            <Fragment>
+              {categories.map((cat, index) => (
+                <span key={cat.category} className="SinglePost--Meta--Category">
+                  {cat.category}
+                  {/* Add a comma on all but last category */}
+                  {index !== categories.length - 1 ? ',' : ''}
+                </span>
+              ))}
+            </Fragment>
+          )}
         </div>
 
+        {title && (
+          <h1 className="SinglePost--Title" itemProp="title">
+            {title}
+          </h1>
+        )}
+
         <div className="SinglePost--InfoPanel">
-          <div className="SinglePost--InfoPanel--Gallery">
-            <h1>Gallery</h1>
-            <img src="//placehold.it/250x250" alt="" />
-            <img src="//placehold.it/250x250" alt="" />
-            <img src="//placehold.it/250x250" alt="" />
-            <img src="//placehold.it/250x250" alt="" />
+          <div>1</div>
+          <div>
+            <h6>Address</h6>
+            {hotelInfo.address && <p>{hotelInfo.address}</p>}
           </div>
-          <div className="SinglePost--InfoPanel--Facts">
-            <h1>Quick Facts</h1>
-            <div>
-              <h3 className="SinglePost--InfoPanel--Facts--FactTitle">yo</h3>
-              <p />
-            </div>
-          </div>
-          <div>Twitter</div>
         </div>
 
         <div className="SinglePost--Pagination">
@@ -118,11 +94,11 @@ export const SinglePostTemplate = ({
 )
 
 // Export Default SinglePost for front-end
-const Hotel = ({ data, pathContext }) => {
+const HotelPost = ({ data, pathContext }) => {
   const { post, allPosts } = data
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
-    <SinglePostTemplate
+    <HotelPostTemplate
       {...post}
       {...post.frontmatter}
       body={post.html}
@@ -132,14 +108,14 @@ const Hotel = ({ data, pathContext }) => {
   )
 }
 
-export default Hotel
+export default HotelPost
 
-export const HotelQuery = graphql`
+export const pageQuery = graphql`
   ## Query for SinglePost data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query HotelQuery($id: String!) {
+  query HotelPost($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
       html
       id
@@ -149,34 +125,6 @@ export const HotelQuery = graphql`
         subtitle
         hotelInfo {
           address
-          city
-          closestAirport
-          cvbMember
-          diamonds
-          direcotSales
-          fitnessCenter
-          generalEmail
-          largestRoom1
-          largestRoom2
-          loyaltyProgramName
-          meetingRoomsAmount
-          parkingFeeSelf
-          parkingFeeValet
-          hasPool
-          hasPoolIndoors
-          hasSpa
-          publicWifiFee
-          resortFee
-          roomsTaxPercent
-          salesEmail
-          salesTax
-          salesTelephone
-          serviceChargePercent
-          numberOfSleepingRooms
-          numberOfSuites
-          telephone
-          twitter
-          website
         }
         categories {
           category
@@ -188,7 +136,7 @@ export const HotelQuery = graphql`
     }
 
     allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { regex: "/^(cvbs|hotels)$/" } } }
+      filter: { fields: { contentType: { regex: "/^(hotels)$/" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

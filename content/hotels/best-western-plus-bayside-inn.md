@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: Hotel 
 title: Best Western Plus Bayside Inn
 status: Published
 categories:
@@ -8,5 +8,5 @@ hotelInfo:
   address: 1717 Embarcadero
   city: 'Oakland, CA'
 ---
+
 this is a article
-     

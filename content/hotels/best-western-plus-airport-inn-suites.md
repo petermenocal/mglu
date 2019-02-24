@@ -1,5 +1,5 @@
 ---
-template: SinglePost
+template: Hotel 
 title: Best Western Plus Airport Inn & Suites
 status: Published
 categories:
@@ -37,5 +37,5 @@ hotelInfo:
   website: google.com
   zip: '89101'
 ---
- this is a article
-               
+
+this is a article
