@@ -1,6 +1,8 @@
 ---
 template: SinglePost
 title: Las Vegas Convention and Visitors Authority
+categories:
+  - category: CVBs
 status: Published
 featuredImage: /images/uploads/all.png
 cvbInfo:
