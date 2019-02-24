@@ -116,12 +116,12 @@ const CVB = ({ data, pathContext }) => {
 
 export default CVB
 
-export const pageQuery = graphql`
+export const CVBQuery = graphql`
   ## Query for SinglePost data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query SinglePost($id: String!) {
+  query CVBQuery($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
       html
       id

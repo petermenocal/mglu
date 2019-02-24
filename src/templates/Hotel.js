@@ -37,36 +37,61 @@ export const SinglePostTemplate = ({
       />
     )}
 
-    <div className="container skinny">
+    <div className="container">
       <Link className="SinglePost--BackButton" to="/blog/">
         <ChevronLeft /> BACK
       </Link>
       <div className="SinglePost--Content relative">
-        <div className="SinglePost--Meta">
-          {categories && (
-            <Fragment>
-              {categories.map((cat, index) => (
-                <span key={cat.category} className="SinglePost--Meta--Category">
-                  {cat.category}
-                  {/* Add a comma on all but last category */}
-                  {index !== categories.length - 1 ? ',' : ''}
-                </span>
-              ))}
-            </Fragment>
-          )}
+        <div className="SinglePost--TitleBar">
+          <div className="SinglePost--TitleBar--Title">
+            <div className="SinglePost--Meta">
+              {categories && (
+                <Fragment>
+                  {categories.map((cat, index) => (
+                    <span
+                      key={cat.category}
+                      className="SinglePost--Meta--Category"
+                    >
+                      {cat.category}
+                      {/* Add a comma on all but last category */}
+                      {index !== categories.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </Fragment>
+              )}
+            </div>
+            {title && (
+              <h1 className="SinglePost--Title" itemProp="title">
+                {title}
+              </h1>
+            )}
+          </div>
+          <div className="SinglePost--Title--Address">
+            <div className="SinglePost--Meta">
+              <span className="SinglePost--Meta--Category">Address</span>
+            </div>
+            {hotelInfo.address && (
+              <h1 className="SinglePost--Title">{hotelInfo.address}</h1>
+            )}
+          </div>
         </div>
 
-        {title && (
-          <h1 className="SinglePost--Title" itemProp="title">
-            {title}
-          </h1>
-        )}
-
         <div className="SinglePost--InfoPanel">
-          <div>1</div>
-          <div>
-            <h6>Address</h6>
+          <div className="SinglePost--InfoPanel--Gallery">
+            <h1>Gallery</h1>
+            <img src="//placehold.it/250x250" alt="" />
+            <img src="//placehold.it/250x250" alt="" />
+            <img src="//placehold.it/250x250" alt="" />
+            <img src="//placehold.it/250x250" alt="" />
           </div>
+          <div className="SinglePost--InfoPanel--Facts">
+            <h1>Quick Facts</h1>
+            <div>
+              <h3 className="SinglePost--InfoPanel--Facts--FactTitle">yo</h3>
+              <p />
+            </div>
+          </div>
+          <div>Twitter</div>
         </div>
 
         <div className="SinglePost--Pagination">
@@ -109,12 +134,12 @@ const Hotel = ({ data, pathContext }) => {
 
 export default Hotel
 
-export const pageQuery = graphql`
+export const HotelQuery = graphql`
   ## Query for SinglePost data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query SinglePost($id: String!) {
+  query HotelQuery($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
       html
       id
@@ -124,6 +149,34 @@ export const pageQuery = graphql`
         subtitle
         hotelInfo {
           address
+          city
+          closestAirport
+          cvbMember
+          diamonds
+          direcotSales
+          fitnessCenter
+          generalEmail
+          largestRoom1
+          largestRoom2
+          loyaltyProgramName
+          meetingRoomsAmount
+          parkingFeeSelf
+          parkingFeeValet
+          hasPool
+          hasPoolIndoors
+          hasSpa
+          publicWifiFee
+          resortFee
+          roomsTaxPercent
+          salesEmail
+          salesTax
+          salesTelephone
+          serviceChargePercent
+          numberOfSleepingRooms
+          numberOfSuites
+          telephone
+          twitter
+          website
         }
         categories {
           category
