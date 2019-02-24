@@ -125,7 +125,7 @@ export const pageQuery = graphql`
     }
 
     allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "posts" } } }
+      filter: { fields: { contentType: { regex: "/^(cvbs|hotels)$/" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
