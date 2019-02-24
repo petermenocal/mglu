@@ -1,6 +1,8 @@
 ---
 template: SinglePost
 title: Arlington Convention & Visitors Service
+categories:
+  - category: CVBs
 status: Published
 featuredImage: /images/uploads/all.png
 cvbInfo:
