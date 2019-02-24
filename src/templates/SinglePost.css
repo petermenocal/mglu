@@ -22,11 +22,18 @@
   background: black;
   color: white;
   padding: 1rem 2rem;
+  height: 50rem;
+  overflow-y: scroll;
 }
 .SinglePost--InfoPanel > div {
   width: calc(33.3% - 2rem);
-  background: red;
   padding: 1rem;
+}
+.SinglePost--InfoPanel--Fact--Content {
+  margin-bottom: 0;
+}
+.SinglePost--InfoPanel--Fact--Title {
+  color: grey;
 }
 .SinglePost--InfoPanel--Gallery {
   overflow-y: scroll;

@@ -77,9 +77,292 @@ export const HotelPostTemplate = ({
             )}
           </div>
         </div>
+
         <div className="SinglePost--InfoPanel">
           <div>Gallery</div>
-          <div>Facts</div>
+          <div>
+            Facts
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.direcotSales && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.direcotSales}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Director of Sales
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.directorCatering && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.directorCatering}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Director of Catering
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.fitnessCenter && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.fitnessCenter}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Fitness center
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.generalEmail && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.generalEmail}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    General email
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.hasPool && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.hasPool}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">Pool</p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.hasPoolIndoors && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.hasPoolIndoors}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Pool indoors?
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.hasSpa && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.hasSpa}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">Spa?</p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.largestRoom1 && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.largestRoom1}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Largest room (sqft)
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.largestRoom2 && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.largestRoom2}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Second largest room (sqft)
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.loyaltyProgramName && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.loyaltyProgramName}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Loyalty Program Name
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.meetingRoomsAmount && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.meetingRoomsAmount}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Number of meeting rooms
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.numberOfSleepingRooms && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.numberOfSleepingRooms}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Number of sleeping rooms
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.numberOfSuites && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.numberOfSuites}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Number of suites
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.parkingFeeSelf && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.parkingFeeSelf}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Self parking fee
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.parkingFeeValet && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.parkingFeeValet}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Valet parking fee
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.publicWifiFee && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.publicWifiFee}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Public wifi fee
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.resortFee && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    ${hotelInfo.resortFee}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Resort fee
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.roomsTaxPercent && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.roomsTaxPercent}%
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Rooms tax
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.salesEmail && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.salesEmail}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Sales email
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.salesTelephone && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.salesTelephone}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Sales telephone
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.serviceChargePercent && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.serviceChargePercent}%
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Service charge percent
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.telephone && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.telephone}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">
+                    Main telephone
+                  </p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.twitter && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.twitter}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">twitter</p>
+                </Fragment>
+              )}
+            </div>
+            <div className="SinglePost--InfoPanel--Fact">
+              {hotelInfo.website && (
+                <Fragment>
+                  <h4 className="SinglePost--InfoPanel--Fact--Content">
+                    {hotelInfo.wesbite}
+                  </h4>
+                  <p className="SinglePost--InfoPanel--Fact--Title">Website</p>
+                </Fragment>
+              )}
+            </div>
+          </div>
           <div>Twitter</div>
         </div>
 
