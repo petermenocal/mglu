@@ -138,6 +138,36 @@ export const pageQuery = graphql`
         subtitle
         hotelInfo {
           address
+          city
+          closestAirport
+          cvbMember
+          diamonds
+          directorCatering
+          direcotSales
+          fitnessCenter
+          generalEmail
+          largestRoom1
+          largestRoom2
+          loyaltyProgramName
+          meetingRoomsAmount
+          parkingFeeSelf
+          parkingFeeValet
+          hasPool
+          hasPoolIndoors
+          hasSpa
+          publicWifiFee
+          resortFee
+          roomsTaxPercent
+          salesEmail
+          salesTax
+          salesTelephone
+          serviceChargePercent
+          numberOfSleepingRooms
+          numberOfSuites
+          telephone
+          twitter
+          website
+          zip
         }
         categories {
           category
