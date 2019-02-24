@@ -25,7 +25,6 @@ const PostCard = ({
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
-      {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
     </div>
   </Link>
 )

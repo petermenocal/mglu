@@ -65,7 +65,7 @@
 }
 .HomePage--PromoBoxes--Category {
   padding: 2rem;
-  width: 33.3%;
+  width: calc(33.3% - 2rem);
 }
 
 .HomePage--PromoBox--Opening {
@@ -80,13 +80,19 @@
   padding-left: 2rem;
   color: white;
 }
+.HomePage--PromoBoxes--Category {
+  width: calc(100% - 2rem);
+}
+
 @media (min-width: 600px) {
+  .HomePage--PromoBoxes--Category {
+    width: calc(33.3% - 2rem);
+  }
   .HomePage--InviteAFellowPlanner--Input--Container {
-    width: 50%;
-    padding: 0 2rem;
+    width: calc(50% - 1rem);
   }
 
   .HomePage--Reviews--Container {
-    width: 50%;
+    width: calc(50% - 1rem);
   }
 }
