@@ -176,6 +176,7 @@ collections: # A list of collections the CMS should be able to edit
           widget: image,
           required: false,
         }
+      - { label: Logo, name: logo, widget: image, required: false }
       - { label: Content, name: body, widget: markdown }
       - label: "CVB info"
         required: false
