@@ -63,7 +63,7 @@ export const SinglePostTemplate = ({
         )}
 
         <div className="SinglePost--InfoPanel">
-          <div>1</div>
+          <div>1ff</div>
           <div>
             <h6>Address</h6>
             {cvbInfo.address && <p>{cvbInfo.address}</p>}
@@ -100,7 +100,7 @@ export const SinglePostTemplate = ({
 )
 
 // Export Default SinglePost for front-end
-const SinglePost = ({ data, pathContext }) => {
+const CVB = ({ data, pathContext }) => {
   const { post, allPosts } = data
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
@@ -114,7 +114,7 @@ const SinglePost = ({ data, pathContext }) => {
   )
 }
 
-export default SinglePost
+export default CVB
 
 export const pageQuery = graphql`
   ## Query for SinglePost data

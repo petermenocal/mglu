@@ -16,7 +16,7 @@ export const SinglePostTemplate = ({
   body,
   nextPostURL,
   prevPostURL,
-  cvbInfo,
+  hotelInfo,
   categories = []
 }) => (
   <article
@@ -66,13 +66,6 @@ export const SinglePostTemplate = ({
           <div>1</div>
           <div>
             <h6>Address</h6>
-            {cvbInfo.address && <p>{cvbInfo.address}</p>}
-            <h6>Phone</h6>
-            {cvbInfo.phone && <p>{cvbInfo.phone}</p>}
-            <h6>Hotel inventory</h6>
-            {cvbInfo.hotelInventory && <p>{cvbInfo.hotelInventory}</p>}
-            <h6>Convention center</h6>
-            {cvbInfo.conventionCenter && <p>{cvbInfo.conventionCenter}</p>}
           </div>
         </div>
 
@@ -100,7 +93,7 @@ export const SinglePostTemplate = ({
 )
 
 // Export Default SinglePost for front-end
-const SinglePost = ({ data, pathContext }) => {
+const Hotel = ({ data, pathContext }) => {
   const { post, allPosts } = data
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
@@ -114,7 +107,7 @@ const SinglePost = ({ data, pathContext }) => {
   )
 }
 
-export default SinglePost
+export default Hotel
 
 export const pageQuery = graphql`
   ## Query for SinglePost data
@@ -129,13 +122,8 @@ export const pageQuery = graphql`
         title
         template
         subtitle
-        cvbInfo {
+        hotelInfo {
           address
-          airports
-          conventionCenter
-          hotelInventory
-          phone
-          transporationCosts
         }
         categories {
           category

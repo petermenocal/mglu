@@ -5,6 +5,10 @@
 .SinglePost--BackgroundImage {
   height: 50rem;
 }
+.SinglePost--InfoPanel {
+  display: flex;
+  justify-content: space-between;
+}
 
 .SinglePost--BackButton {
   color: white;

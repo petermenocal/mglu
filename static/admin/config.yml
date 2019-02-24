@@ -151,7 +151,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{slug}}"
     create: true
     fields:
-      - { label: Template, name: template, widget: hidden, default: SinglePost }
+      - { label: Template, name: template, widget: hidden, default: CVB }
       - { label: Name, name: title, widget: string }
       - label: "Categories"
         name: "categories"
