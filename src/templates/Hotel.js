@@ -37,37 +37,50 @@ export const HotelPostTemplate = ({
       />
     )}
 
-    <div className="container skinny">
+    <div className="container">
       <Link className="SinglePost--BackButton" to="/blog/">
         <ChevronLeft /> BACK
       </Link>
       <div className="SinglePost--Content relative">
-        <div className="SinglePost--Meta">
-          {categories && (
-            <Fragment>
-              {categories.map((cat, index) => (
-                <span key={cat.category} className="SinglePost--Meta--Category">
-                  {cat.category}
-                  {/* Add a comma on all but last category */}
-                  {index !== categories.length - 1 ? ',' : ''}
-                </span>
-              ))}
-            </Fragment>
-          )}
-        </div>
-
-        {title && (
-          <h1 className="SinglePost--Title" itemProp="title">
-            {title}
-          </h1>
-        )}
-
-        <div className="SinglePost--InfoPanel">
-          <div>1</div>
+        <div className="SinglePost--TitleBar">
           <div>
-            <h6>Address</h6>
-            {hotelInfo.address && <p>{hotelInfo.address}</p>}
+            <div className="SinglePost--Meta">
+              {categories && (
+                <Fragment>
+                  {categories.map((cat, index) => (
+                    <span
+                      key={cat.category}
+                      className="SinglePost--Meta--Category"
+                    >
+                      {cat.category}
+                      {/* Add a comma on all but last category */}
+                      {index !== categories.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </Fragment>
+              )}
+            </div>
+
+            {title && (
+              <h1 className="SinglePost--Title" itemProp="title">
+                {title}
+              </h1>
+            )}
           </div>
+
+          <div>
+            <div className="SinglePost--Meta">
+              <span className="SinglePost--Meta--Category">Address</span>
+            </div>
+            {hotelInfo.address && (
+              <h1 className="SinglePost--Title">{hotelInfo.address}</h1>
+            )}
+          </div>
+        </div>
+        <div className="SinglePost--InfoPanel">
+          <div>Gallery</div>
+          <div>Facts</div>
+          <div>Twitter</div>
         </div>
 
         <div className="SinglePost--Pagination">

@@ -2,14 +2,43 @@
   color: black;
 }
 
+.SinglePost--TitleBar {
+  height: 10rem;
+  background: rebeccapurple;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.SinglePost--Title--Address {
+}
 .SinglePost--BackgroundImage {
   height: 50rem;
 }
 .SinglePost--InfoPanel {
   display: flex;
   justify-content: space-between;
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+.SinglePost--InfoPanel > div {
+  width: calc(33.3% - 2rem);
+  background: red;
+  padding: 1rem;
+}
+.SinglePost--InfoPanel--Gallery {
+  overflow-y: scroll;
+  max-width: 250px;
+}
+.SinglePost--InfoPanel--Gallery img {
+  max-width: 230px;
 }
 
+.SinglePost--InfoPanel--Facts--FactTitle {
+  margin-bottom: 0;
+}
 .SinglePost--BackButton {
   color: white;
   position: relative;
@@ -34,7 +63,6 @@
 .SinglePost--Content {
   background: white;
   margin-top: 30rem;
-  padding: 8rem 8rem 4rem 8rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -45,8 +73,7 @@
 
 .SinglePost--Meta {
   font-size: 1rem;
-  margin: 0 0 2rem 0;
-  text-align: center;
+  margin: 1rem 0 1rem 0;
 }
 
 .SinglePost--Meta > * + * {
