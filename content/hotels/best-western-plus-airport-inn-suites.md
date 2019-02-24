@@ -38,5 +38,26 @@ hotelInfo:
   website: google.com
   zip: '89101'
 ---
+![](/images/uploads/smartstart.png)
 
-this is a article
+## Start 2019 with smart savings and great rewards!
+
+#### Book 10-20 room nights
+Pick from level 1 perks
+
+#### Book 10-20 room nights
+Pick from level 1 perks
+
+#### Book 10-20 room nights
+Pick from level 1 perks
+
+#### Book 10-20 room nights
+Pick from level 1 perks
+
+# Your SMART Perk Choices:
+- Triple Marriott Rewards Points (Level 1)
+- 5,000 Marriott Rewards Signing Bonus (Level 1)
+- 1 VIP upgrade to a suite, complimentary parking and daily breakfast (Level 1)
+- $100 Gift Card (Level 2)
+- 10,000 Marriott Reward Points (Level 2)
+- 1 Complimentary Staff Room per night (Level 2)
