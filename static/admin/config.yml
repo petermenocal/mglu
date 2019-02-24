@@ -165,6 +165,21 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
       - { label: Content, name: body, widget: markdown }
+      - label: "CVB info"
+        required: false
+        name: "cvbInfo"
+        widget: "object"
+        fields:
+          - { label: Address, name: address, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Hotel Inventory, name: hotelInventory, widget: string }
+          - { label: Convention Center, name: conventionCenter, widget: string }
+          - { label: Airports, name: airports, widget: markdown }
+          - {
+              label: Transportation costs,
+              name: transporationCosts,
+              widget: markdown,
+            }
 
   - name: hotels
     label: Hotel
