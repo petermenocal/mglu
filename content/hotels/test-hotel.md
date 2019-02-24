@@ -1,6 +1,6 @@
 ---
 template: SinglePost
-title: Test hotel
+title: Courtyard Oakland Downtown
 status: Published
 categories:
   - category: Hotels
