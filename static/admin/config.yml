@@ -277,6 +277,10 @@ collections: # A list of collections the CMS should be able to edit
               widget: number,
             }
           - { label: Number of Suites, name: numberOfSuites, widget: number }
+          - { label: Telepbone, name: telephone, widget: string }
+          - { label: Twitter Username, name: twitter, widget: string }
+          - { label: Website address, name: website, widget: string }
+          - { label: zip, name: zip, widget: string }
 
       - label: "Meta"
         required: false
