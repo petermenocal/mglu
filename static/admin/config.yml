@@ -153,6 +153,18 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Name, name: title, widget: string }
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Category"
+            name: "category"
+            widget: "relation"
+            collection: "postCategories"
+            searchFields: ["title"]
+            valueField: "title"
+            default: "cvbs"
       - label: "Status"
         name: "status"
         widget: "select"
@@ -214,6 +226,7 @@ collections: # A list of collections the CMS should be able to edit
             collection: "postCategories"
             searchFields: ["title"]
             valueField: "title"
+            default: "hotels"
       - label: "Hotel info"
         required: false
         name: "hotelInfo"
