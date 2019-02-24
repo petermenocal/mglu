@@ -37,34 +37,52 @@ export const CVBPostTemplate = ({
       />
     )}
 
-    <div className="container skinny">
+    <div className="container">
       <Link className="SinglePost--BackButton" to="/blog/">
         <ChevronLeft /> BACK
       </Link>
+
       <div className="SinglePost--Content relative">
-        <div className="SinglePost--Meta">
-          {categories && (
-            <Fragment>
-              {categories.map((cat, index) => (
-                <span key={cat.category} className="SinglePost--Meta--Category">
-                  {cat.category}
-                  {/* Add a comma on all but last category */}
-                  {index !== categories.length - 1 ? ',' : ''}
-                </span>
-              ))}
-            </Fragment>
-          )}
+        <div className="SinglePost--TitleBar">
+          <div>
+            <div className="SinglePost--Meta">
+              {categories && (
+                <Fragment>
+                  {categories.map((cat, index) => (
+                    <span
+                      key={cat.category}
+                      className="SinglePost--Meta--Category"
+                    >
+                      {cat.category}
+                      {/* Add a comma on all but last category */}
+                      {index !== categories.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </Fragment>
+              )}
+            </div>
+
+            {title && (
+              <h1 className="SinglePost--Title" itemProp="title">
+                {title}
+              </h1>
+            )}
+          </div>
         </div>
 
-        {title && (
-          <h1 className="SinglePost--Title" itemProp="title">
-            {title}
-          </h1>
-        )}
-
         <div className="SinglePost--InfoPanel">
-          <div>1</div>
-          <div>
+          <iframe
+            className="SinglePost--InfoPanel--Half"
+            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDFNHiqNqTY71ndy21IcODVX2MikRJZWmg&q=${
+              cvbInfo.address
+            }`}
+            allowfullscreen="allowfullscreen"
+            style={{ border: `0px none` }}
+            frameborder="0"
+            width="100%"
+            height="auto"
+          />
+          <div className="SinglePost--InfoPanel--Half">
             <h6>Address</h6>
             {cvbInfo.address & <p>{cvbInfo.address}</p>}
             <h6>Phone</h6>
@@ -76,6 +94,68 @@ export const CVBPostTemplate = ({
           </div>
         </div>
 
+        <section
+          className="SinglePost--InnerContent"
+          style={{ background: `white`, color: `black` }}
+        >
+          <h1>CVB Updates</h1>
+          <div className="container">
+            <Content source={body} />
+            <div>
+              <a
+                class="twitter-timeline"
+                href={`https://twitter.com/${
+                  cvbInfo.twitter
+                }?ref_src=twsrc%5Etfw`}
+              >
+                Tweets by {title}
+              </a>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              />{' '}
+            </div>
+          </div>
+        </section>
+
+        {body && (
+          <section className="SinglePost--InnerContent">
+            <h1 className="taCenter accent">Sales Staff</h1>
+            <div className="container SinglePost--CVB--SalesStaff">
+              <div>
+                <h3 style={{ marginBottom: `0` }}>Portia Conerly</h3>
+                <p style={{ marginBottom: `0`, color: `whitesmoke` }}>
+                  Meetings and Conventions Manager
+                </p>
+                <small style={{ marginRight: `3rem` }}>
+                  pconerly@arlingtonva.us
+                </small>
+                <small>703-228-0873</small>
+              </div>
+              <div>
+                <h3 style={{ marginBottom: `0` }}>Portia Conerly</h3>
+                <p style={{ marginBottom: `0`, color: `whitesmoke` }}>
+                  Meetings and Conventions Manager
+                </p>
+                <small style={{ marginRight: `3rem` }}>
+                  pconerly@arlingtonva.us
+                </small>
+                <small>703-228-0873</small>
+              </div>
+              <div>
+                <h3 style={{ marginBottom: `0` }}>Portia Conerly</h3>
+                <p style={{ marginBottom: `0`, color: `whitesmoke` }}>
+                  Meetings and Conventions Manager
+                </p>
+                <small style={{ marginRight: `3rem` }}>
+                  pconerly@arlingtonva.us
+                </small>
+                <small>703-228-0873</small>
+              </div>
+            </div>
+          </section>
+        )}
         <div className="SinglePost--Pagination">
           {prevPostURL && (
             <Link
@@ -135,6 +215,7 @@ export const pageQuery = graphql`
           conventionCenter
           hotelInventory
           phone
+          twitter
           transporationCosts
         }
         categories {

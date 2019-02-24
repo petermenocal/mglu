@@ -1,5 +1,6 @@
 .SinglePost {
   color: black;
+  background: rgb(54, 52, 90);
 }
 
 .SinglePost--TitleBar {
@@ -25,6 +26,11 @@
   height: 50rem;
   overflow-y: scroll;
 }
+.SinglePost--CVB--SalesStaff {
+  display: flex;
+  justify-content: space-between;
+}
+
 .SinglePost--InfoPanel > div {
   width: calc(33.3% - 2rem);
   padding: 1rem;
