@@ -8,6 +8,7 @@ categories:
 hotelInfo:
   address: '1755 Embarcadero  '
   city: 'Oakland, CA'
+  cvbMember: 'true'
 ---
 
 this is a article
