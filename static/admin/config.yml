@@ -12,7 +12,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Page"
     delete: false # Prevent users from deleting documents in this collection
     editor:
-      preview: true
+      preview: false
     files:
       - file: "content/pages/blog.md"
         label: "List"
@@ -146,7 +146,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: cvbs
     label: Cvb
     editor:
-      preview: true
+      preview: false
     folder: content/cvbs
     slug: "{{slug}}"
     create: true
@@ -198,7 +198,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: hotels
     label: Hotel
     editor:
-      preview: true
+      preview: false
     folder: content/hotels
     slug: "{{slug}}"
     create: true # Allow users to create new documents in this collection
