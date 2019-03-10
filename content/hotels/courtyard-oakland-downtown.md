@@ -9,27 +9,32 @@ hotelInfo:
   address: 9888 Broadway
   city: Oakland
   closestAirport: OAK or SFO
-  cvbMember: 'true'
+  cvbMember: ''
   diamonds: AAA 3 Diamond
-  direcotSales: Ruben Barahona
+  direcotSales: ''
   fitnessCenter: 'true'
   generalEmail: Ruben.Barahona@interstatehotels.com
   hasPool: 'true'
-  hasPoolIndoors: 'false'
+  hasPoolIndoors: ''
   hasSpa: 'false'
-  loyaltyProgramName: Marriott Rewards
+  largestRoom1: '1200'
+  largestRoom2: '1500'
+  loyaltyProgramName: Marriott Bonvoy
   meetingRoomsAmount: '3'
   numberOfSleepingRooms: '162'
-  numberOfSuites: '5'
-  parkingFeeSelf: ''
+  numberOfSuites: ''
+  parkingFeeSelf: '35'
+  parkingFeeValet: '40'
   publicWifiFee: '0'
-  roomsTaxPercent: ''
-  salesEmail: Ruben.Barahona@interstatehotels.com
-  salesTax: ''
-  salesTelephone: 510.625.8282
-  serviceChargePercent: ''
-  telephone: 510.625.8282
-  twitter: ''
+  resortFee: '0'
+  roomsTaxPercent: '10'
+  salesEmail: ''
+  salesTax: '19'
+  salesTelephone: ''
+  serviceChargePercent: '25'
+  telephone: ''
+  twitter: '@MarriottBonvoy'
+  website: 'https://www.marriott.com/hotels/travel/oakcd-courtyard-oakland-downtown/'
   zip: '94607'
 ---
 ## SMART Starts in 2019
