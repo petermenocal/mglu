@@ -31,7 +31,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-feather": "^1.1.0",
+    "react-feather": "^1.1.6",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.3.2",
     "react-twitter-embed": "^2.0.4",

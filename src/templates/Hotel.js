@@ -4,10 +4,12 @@ import _get from 'lodash/get'
 import _format from 'date-fns/format'
 import Link from 'gatsby-link'
 import { ChevronLeft } from 'react-feather'
-import { Flex, Box } from 'rebass'
+import { Flex, Box, Heading, Text } from 'rebass'
 import Content from '../components/Content'
 import Image from '../components/Image'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
+import { Heart, Star, Frown } from 'react-feather'
+
 import './SinglePost.css'
 export const HotelPostTemplate = ({
   title,
@@ -42,76 +44,95 @@ export const HotelPostTemplate = ({
         <ChevronLeft /> BACK
       </Link>
       <div className="SinglePost--Content relative">
-        <div className="SinglePost--TitleBar">
-          <div>
-            <div className="SinglePost--Meta">
-              {categories && (
-                <Fragment>
-                  {categories.map((cat, index) => (
-                    <span
-                      key={cat.category}
-                      className="SinglePost--Meta--Category"
-                    >
-                      {cat.category}
-                      {/* Add a comma on all but last category */}
-                      {index !== categories.length - 1 ? ',' : ''}
-                    </span>
-                  ))}
-                </Fragment>
+        <Flex flexWrap="wrap" bg="rebeccapurple" color="white" p={2}>
+          <Box width={[1, 1, 1 / 2]}>
+            <div>
+              <div className="SinglePost--Meta">
+                {categories && (
+                  <Fragment>
+                    {categories.map((cat, index) => (
+                      <span
+                        key={cat.category}
+                        className="SinglePost--Meta--Category"
+                      >
+                        {cat.category}
+                        {/* Add a comma on all but last category */}
+                        {index !== categories.length - 1 ? ',' : ''}
+                      </span>
+                    ))}
+                  </Fragment>
+                )}
+              </div>
+
+              {title && (
+                <h1
+                  className="SinglePost--Title"
+                  itemProp="title"
+                  style={{ textAlign: `left` }}
+                >
+                  {title}
+                </h1>
               )}
             </div>
+          </Box>
 
-            {title && (
-              <h1 className="SinglePost--Title" itemProp="title">
-                {title}
-              </h1>
-            )}
-          </div>
-
-          <div>
-            <div className="SinglePost--Meta">
-              <span className="SinglePost--Meta--Category">Address</span>
+          <Box width={[1, 1, 1 / 2]}>
+            <div>
+              <div className="SinglePost--Meta">
+                <span className="SinglePost--Meta--Category">Address</span>
+              </div>
+              {hotelInfo.address && (
+                <h1 className="SinglePost--Title" style={{ textAlign: `left` }}>
+                  {hotelInfo.address}
+                </h1>
+              )}
             </div>
-            {hotelInfo.address && (
-              <h1 className="SinglePost--Title">{hotelInfo.address}</h1>
-            )}
-          </div>
-        </div>
+          </Box>
+        </Flex>
 
-        <div className="SinglePost--InfoPanel">
-          <div>
+        <Flex
+          bg="black"
+          color="white"
+          p={3}
+          flexWrap="wrap"
+          flexDirection="row"
+        >
+          <Box width={[1, 1, 1 / 3]}>
             <Flex
               flexDirection="row"
               flexWrap="wrap"
               justifyContent="space-around"
             >
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
               <Box>
-                <img src="//placehold.it/75x75" />
+                <img src="//placehold.it/125x125" />
               </Box>
             </Flex>
-          </div>
-          <div>
+          </Box>
+          <Box
+            width={[1, 1, 1 / 3]}
+            style={{ overflow: `scroll`, height: 500 }}
+          >
             <div className="SinglePost--InfoPanel--Fact">
               {hotelInfo.direcotSales && (
                 <Fragment>
@@ -392,17 +413,114 @@ export const HotelPostTemplate = ({
                 </Fragment>
               )}
             </div>
-          </div>
-          {hotelInfo.twitter && (
-            <div>
-              <TwitterTimelineEmbed
-                sourceType="profile"
-                screenName={hotelInfo.twitter}
-                options={{ height: 900 }}
-              />
-            </div>
-          )}
-        </div>
+          </Box>
+          <Box
+            width={[1, 1, 1 / 3]}
+            style={{ height: 500, overflow: `scroll` }}
+          >
+            {hotelInfo.twitter && (
+              <div>
+                <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName={hotelInfo.twitter}
+                  options={{ height: 900 }}
+                />
+              </div>
+            )}
+            {!hotelInfo.twitter && (
+              <div>
+                <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="oaklandmarriott"
+                  options={{ height: 900 }}
+                />
+              </div>
+            )}
+          </Box>
+        </Flex>
+
+        <Flex bg="white" p={3}>
+          <Box>
+            <Heading textAlign="center">Pro Tips</Heading>
+            <Flex flexDirection="row" flexWrap="wrap">
+              <Box width={[1, 1, 1 / 2]}>
+                <Flex
+                  alignItems="center"
+                  pb={2}
+                  mb={2}
+                  style={{ borderBottom: `1px solid rgba(0, 0, 0, 0.3)` }}
+                >
+                  <Text pr={2}>Rating category:</Text>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  pb={2}
+                  mb={2}
+                  style={{ borderBottom: `1px solid rgba(0, 0, 0, 0.3)` }}
+                >
+                  <Text pr={2}>Rating category:</Text>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  pb={2}
+                  mb={2}
+                  style={{ borderBottom: `1px solid rgba(0, 0, 0, 0.3)` }}
+                >
+                  <Text pr={2}>Rating category:</Text>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  pb={2}
+                  mb={2}
+                  style={{ borderBottom: `1px solid rgba(0, 0, 0, 0.3)` }}
+                >
+                  <Text pr={2}>Rating category:</Text>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  pb={2}
+                  mb={2}
+                  style={{ borderBottom: `1px solid rgba(0, 0, 0, 0.3)` }}
+                >
+                  <Text pr={2}>Rating category:</Text>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </Flex>
+              </Box>
+              <Box width={[1, 1, 1 / 2]} p={3}>
+                <Text>
+                  "Diam adipiscing sed eget curae suspendisse leo velit eleifend
+                  fermentum, platea suscipit per nulla habitasse neque
+                  sollicitudin habitant orci sapien, potenti a placerat nascetur
+                  vivamus netus ullamcorper blandit." <br /> - by user 59291
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
+        </Flex>
 
         {body && (
           <section className="SinglePost--InnerContent">
