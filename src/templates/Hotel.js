@@ -4,11 +4,11 @@ import _get from 'lodash/get'
 import _format from 'date-fns/format'
 import Link from 'gatsby-link'
 import { ChevronLeft } from 'react-feather'
-
+import { Flex, Box } from 'rebass'
 import Content from '../components/Content'
 import Image from '../components/Image'
+import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import './SinglePost.css'
-
 export const HotelPostTemplate = ({
   title,
   date,
@@ -79,9 +79,39 @@ export const HotelPostTemplate = ({
         </div>
 
         <div className="SinglePost--InfoPanel">
-          <div>Gallery</div>
           <div>
-            Facts
+            <Flex
+              flexDirection="row"
+              flexWrap="wrap"
+              justifyContent="space-around"
+            >
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+              <Box>
+                <img src="//placehold.it/75x75" />
+              </Box>
+            </Flex>
+          </div>
+          <div>
             <div className="SinglePost--InfoPanel--Fact">
               {hotelInfo.direcotSales && (
                 <Fragment>
@@ -363,7 +393,15 @@ export const HotelPostTemplate = ({
               )}
             </div>
           </div>
-          <div>Twitter</div>
+          {hotelInfo.twitter && (
+            <div>
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName={hotelInfo.twitter}
+                options={{ height: 900 }}
+              />
+            </div>
+          )}
         </div>
 
         {body && (
