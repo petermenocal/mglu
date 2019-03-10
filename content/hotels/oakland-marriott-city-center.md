@@ -2,7 +2,7 @@
 template: Hotel
 title: Oakland Marriott City Center
 status: Published
-featuredImage: /images/uploads/all.png
+featuredImage: /images/uploads/oak-1.png
 categories:
   - category: Hotels
 hotelInfo:
