@@ -33,7 +33,7 @@ hotelInfo:
   salesTax: '9.25'
   salesTelephone: '5104666493'
   serviceChargePercent: '24'
-  twitter: '@OaklandMarriott'
+  twitter: OaklandMarriott
   website: 'https://www.marriott.com/hotels/travel/oakdt-oakland-marriott-city-center/'
   zip: '94607'
 ---
