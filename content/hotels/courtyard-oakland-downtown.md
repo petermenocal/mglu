@@ -33,7 +33,7 @@ hotelInfo:
   salesTelephone: ''
   serviceChargePercent: '25'
   telephone: ''
-  twitter: '@MarriottBonvoy'
+  twitter: MarriottBonvoy
   website: 'https://www.marriott.com/hotels/travel/oakcd-courtyard-oakland-downtown/'
   zip: '94607'
 ---
