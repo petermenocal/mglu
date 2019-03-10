@@ -13,7 +13,7 @@ hotelInfo:
   diamonds: AAA 3 Diamond
   direcotSales: ''
   fitnessCenter: 'true'
-  generalEmail: Ruben.Barahona@interstatehotels.com
+  generalEmail: ''
   hasPool: 'true'
   hasPoolIndoors: ''
   hasSpa: 'false'
