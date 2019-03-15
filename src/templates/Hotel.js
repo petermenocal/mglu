@@ -9,8 +9,33 @@ import Content from '../components/Content'
 import Image from '../components/Image'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import { Heart, Star, Frown } from 'react-feather'
+import HotelFact from '../components/HotelFact'
 
 import './SinglePost.css'
+
+const EventItem = props => (
+  <Flex flexDirection="row" flexWrap="wrap">
+    <Flex alignItems="center" justifyContent="center" width={[1, 1 / 3]} pr={3}>
+      <img
+        src="//placehold.it/300x300"
+        width="100%"
+        style={{ borderRadius: `50%` }}
+      />
+    </Flex>
+    <Box width={[1, 2 / 3]}>
+      <Heading color="orange">Event Name</Heading>
+      <Heading fontSize={1} fontWeight={2} mb={2}>
+        12/12/2008
+      </Heading>
+      <Text fontSize={1}>
+        Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
+        pellentesque, taciti felis nam etiam luctus semper leo natoque finibus,
+        maecenas proin sapien lacinia sit condimentum.
+      </Text>
+    </Box>
+  </Flex>
+)
+
 export const HotelPostTemplate = ({
   title,
   date,
@@ -89,7 +114,6 @@ export const HotelPostTemplate = ({
             </div>
           </Box>
         </Flex>
-
         <Flex
           bg="black"
           color="white"
@@ -97,345 +121,98 @@ export const HotelPostTemplate = ({
           flexWrap="wrap"
           flexDirection="row"
         >
-          <Box width={[1, 1, 1 / 3]}>
-            <Flex
-              flexDirection="row"
-              flexWrap="wrap"
-              justifyContent="space-around"
-            >
-              <Box>
-                <img src="//placehold.it/125x125" />
+          <Box width={[1, 1, 2 / 3]}>
+            <Flex flexDirection="row" flexWrap="wrap">
+              <Box p={3}>
+                <img src="//placehold.it/200x200" />
               </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
+              <Box p={3}>
+                <img src="//placehold.it/200x200" />
               </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
+              <Box p={3}>
+                <img src="//placehold.it/200x200" />
               </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
-              </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
-              </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
-              </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
-              </Box>
-              <Box>
-                <img src="//placehold.it/125x125" />
+              <Box p={3}>
+                <img src="//placehold.it/200x200" />
               </Box>
             </Flex>
           </Box>
           <Box
             width={[1, 1, 1 / 3]}
-            style={{ overflow: `scroll`, height: 500 }}
+            style={{ maxHeight: 500, overflow: `scroll` }}
           >
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.direcotSales && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.direcotSales}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Director of Sales
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.directorCatering && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.directorCatering}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Director of Catering
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.fitnessCenter && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.fitnessCenter}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Fitness center
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.generalEmail && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.generalEmail}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    General email
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.hasPool && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.hasPool}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">Pool</p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.hasPoolIndoors && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.hasPoolIndoors}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Pool indoors?
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.hasSpa && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.hasSpa}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">Spa?</p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.largestRoom1 && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.largestRoom1}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Largest room (sqft)
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.largestRoom2 && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.largestRoom2}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Second largest room (sqft)
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.loyaltyProgramName && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.loyaltyProgramName}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Loyalty Program Name
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.meetingRoomsAmount && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.meetingRoomsAmount}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Number of meeting rooms
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.numberOfSleepingRooms && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.numberOfSleepingRooms}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Number of sleeping rooms
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.numberOfSuites && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.numberOfSuites}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Number of suites
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.parkingFeeSelf && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.parkingFeeSelf}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Self parking fee
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.parkingFeeValet && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.parkingFeeValet}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Valet parking fee
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.publicWifiFee && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.publicWifiFee}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Public wifi fee
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.resortFee && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    ${hotelInfo.resortFee}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Resort fee
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.roomsTaxPercent && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.roomsTaxPercent}%
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Rooms tax
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.salesEmail && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.salesEmail}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Sales email
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.salesTelephone && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.salesTelephone}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Sales telephone
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.serviceChargePercent && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.serviceChargePercent}%
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Service charge percent
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.telephone && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.telephone}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">
-                    Main telephone
-                  </p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.twitter && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.twitter}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">twitter</p>
-                </Fragment>
-              )}
-            </div>
-            <div className="SinglePost--InfoPanel--Fact">
-              {hotelInfo.website && (
-                <Fragment>
-                  <h4 className="SinglePost--InfoPanel--Fact--Content">
-                    {hotelInfo.wesbite}
-                  </h4>
-                  <p className="SinglePost--InfoPanel--Fact--Title">Website</p>
-                </Fragment>
-              )}
-            </div>
-          </Box>
-          <Box
-            width={[1, 1, 1 / 3]}
-            style={{ height: 500, overflow: `scroll` }}
-          >
-            {hotelInfo.twitter && (
-              <div>
-                <TwitterTimelineEmbed
-                  sourceType="profile"
-                  screenName={hotelInfo.twitter}
-                  options={{ height: 900 }}
-                />
-              </div>
-            )}
-            {!hotelInfo.twitter && (
-              <div>
-                <TwitterTimelineEmbed
-                  sourceType="profile"
-                  screenName="oaklandmarriott"
-                  options={{ height: 900 }}
-                />
-              </div>
-            )}
+            <HotelFact
+              title="Director of Sales"
+              value={hotelInfo.direcotSales}
+            />
+            <HotelFact
+              title="Director of Catering"
+              value={hotelInfo.directorCatering}
+            />
+            <HotelFact title="Twitter" value={hotelInfo.twitter} />
+            <HotelFact
+              title="Sleeping Rooms"
+              value={hotelInfo.numberOfSleepingRooms}
+            />
+            <HotelFact title="Rooms Tax" value={hotelInfo.roomsTaxPercent} />
+            <HotelFact title="Resort Fee" value={hotelInfo.resortFee} />
+            <HotelFact
+              title="Wifi (Guestroom)"
+              value={hotelInfo.publicWifiFee}
+            />
+            <HotelFact
+              title="Self Parking Fee"
+              value={hotelInfo.parkingFeeSelf}
+            />
+            <HotelFact
+              title="Valet Parking Fee"
+              value={hotelInfo.parkingFeeValet}
+            />
+            <HotelFact
+              title="Total Meeting Space"
+              value={hotelInfo.meetingRoomsAmount}
+            />
+            <HotelFact
+              title="Total Meeting Space"
+              value={hotelInfo.meetingRoomsAmount}
+            />
+            <HotelFact
+              title="Largest Room (1)"
+              value={hotelInfo.largestRoom1}
+            />
+            <HotelFact
+              title="Largest Room (2)"
+              value={hotelInfo.largestRoom2}
+            />
+            <HotelFact
+              title="Number of Meeting Rooms"
+              value={hotelInfo.meetingRoomsAmount}
+            />
+            <HotelFact
+              title="Public Space Wifi"
+              value={hotelInfo.publicWifiFee}
+            />
+            <HotelFact
+              title="Public Space Wifi"
+              value={hotelInfo.publicWifiFee}
+            />
+            <HotelFact title="Sales Tax" value={hotelInfo.salesTax} />
+            <HotelFact
+              title="Service Charge"
+              value={hotelInfo.serviceChargePercent}
+            />
+            <HotelFact title="Hotel Rating" value={hotelInfo.diamonds} />
+            <HotelFact
+              title="Loyalty Program"
+              value={hotelInfo.loyaltyProgramName}
+            />
+            <HotelFact
+              title="Closest Airport"
+              value={hotelInfo.closestAirport}
+            />
+            <HotelFact title="Fitness Center" value={hotelInfo.fitnessCenter} />
+            <HotelFact title="Pool" value={hotelInfo.hasPool} />
+            <HotelFact title="Spa" value={hotelInfo.hasSpa} />
           </Box>
         </Flex>
 
@@ -531,47 +308,46 @@ export const HotelPostTemplate = ({
         )}
 
         <div className="SinglePost--Events">
-          {title && (
-            <h1 className="SinglePost--Title" itemProp="title">
-              Events near {title}
-            </h1>
-          )}
-          <div className="SinglePost--Events--Event">
-            <img src="//placehold.it/200x200" />
-            <div>
-              <h1>Event Name</h1>
-              <p>
-                Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
-                pellentesque, taciti felis nam etiam luctus semper leo natoque
-                finibus, maecenas proin sapien lacinia sit condimentum dictumst
-                sodales.
-              </p>
-            </div>
-          </div>
-          <div className="SinglePost--Events--Event">
-            <img src="//placehold.it/200x200" />
-            <div>
-              <h1>Event Name</h1>
-              <p>
-                Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
-                pellentesque, taciti felis nam etiam luctus semper leo natoque
-                finibus, maecenas proin sapien lacinia sit condimentum dictumst
-                sodales.
-              </p>
-            </div>
-          </div>
-          <div className="SinglePost--Events--Event">
-            <img src="//placehold.it/200x200" />
-            <div>
-              <h1>Event Name</h1>
-              <p>
-                Quam dis ad venenatis mollis penatibus aenean aliquet vulputate
-                pellentesque, taciti felis nam etiam luctus semper leo natoque
-                finibus, maecenas proin sapien lacinia sit condimentum dictumst
-                sodales.
-              </p>
-            </div>
-          </div>
+          <Flex>
+            <Box width={[1, 1, 1 / 3]}>
+              {hotelInfo.twitter && (
+                <Flex
+                  alignItems="center"
+                  flexDirection="column"
+                  justifyContent="center"
+                  pt={4}
+                >
+                  <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName={hotelInfo.twitter}
+                    options={{ height: 850 }}
+                  />
+                </Flex>
+              )}
+            </Box>
+            <Box width={[1, 2 / 3]} pl={3}>
+              <Flex flexDirection="column">
+                {title && (
+                  <Heading fontSize={3} textAlign="center" color="orange">
+                    Events nearby
+                  </Heading>
+                )}
+                <Box width={1}>
+                  <img src="//placehold.it/500x200" width="100%" />
+                  <h1>Event Name</h1>
+                  <p>
+                    Quam dis ad venenatis mollis penatibus aenean aliquet
+                    vulputate pellentesque, taciti felis nam etiam luctus semper
+                    leo natoque finibus, maecenas proin sapien lacinia sit
+                    condimentum dictumst.
+                  </p>
+                </Box>
+                <EventItem />
+                <EventItem />
+                <EventItem />
+              </Flex>
+            </Box>
+          </Flex>
         </div>
 
         {hotelInfo.address && (
