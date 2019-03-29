@@ -135,6 +135,12 @@ export const HotelPostTemplate = ({
               <Box p={3}>
                 <img src="//placehold.it/200x200" />
               </Box>
+              <Box p={3}>
+                <img src="//placehold.it/200x200" />
+              </Box>
+              <Box p={3}>
+                <img src="//placehold.it/200x200" />
+              </Box>
             </Flex>
           </Box>
           <Box
