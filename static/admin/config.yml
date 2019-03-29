@@ -4,19 +4,19 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 # display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: 'static/images/uploads' # Media files will be stored in the repo under static/images/uploads
+public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "pages"
-    label: "Page"
+  - name: 'pages'
+    label: 'Page'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
-      - file: "content/pages/blog.md"
-        label: "List"
-        name: "list-page"
+      - file: 'content/pages/blog.md'
+        label: 'List'
+        name: 'list-page'
         fields:
           - {
               label: Template,
@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: BlogIndex,
             }
-          - { label: Slug, name: slug, widget: hidden, default: "blog" }
+          - { label: Slug, name: slug, widget: hidden, default: 'blog' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
           - {
@@ -33,10 +33,10 @@ collections: # A list of collections the CMS should be able to edit
               widget: markdown,
               required: false,
             }
-          - label: "Meta"
+          - label: 'Meta'
             required: false
-            name: "meta"
-            widget: "object"
+            name: 'meta'
+            widget: 'object'
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - {
@@ -44,7 +44,7 @@ collections: # A list of collections the CMS should be able to edit
                   name: description,
                   widget: text,
                   required: false,
-                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Canonical Link,
@@ -59,9 +59,9 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: "content/pages/home.md"
-        label: "Home Page"
-        name: "home-page"
+      - file: 'content/pages/home.md'
+        label: 'Home Page'
+        name: 'home-page'
         fields:
           - {
               label: Template,
@@ -69,13 +69,13 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: HomePage,
             }
-          - { label: Slug, name: slug, widget: hidden, default: "" }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
-          - label: "Reviews"
-            name: "reviews"
-            widget: "object"
+          - label: 'Reviews'
+            name: 'reviews'
+            widget: 'object'
             fields:
               - {
                   label: Review 1 Property,
@@ -88,7 +88,7 @@ collections: # A list of collections the CMS should be able to edit
                   name: review1body,
                   widget: text,
                   required: true,
-                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Review 2 Property,
@@ -101,7 +101,7 @@ collections: # A list of collections the CMS should be able to edit
                   name: review2body,
                   widget: text,
                   required: true,
-                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Review 3 Property,
@@ -114,13 +114,13 @@ collections: # A list of collections the CMS should be able to edit
                   name: review3body,
                   widget: text,
                   required: true,
-                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
 
-          - label: "Meta"
+          - label: 'Meta'
             required: false
-            name: "meta"
-            widget: "object"
+            name: 'meta'
+            widget: 'object'
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - {
@@ -128,7 +128,7 @@ collections: # A list of collections the CMS should be able to edit
                   name: description,
                   widget: text,
                   required: false,
-                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
                 }
               - {
                   label: Canonical Link,
@@ -148,28 +148,28 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     folder: content/cvbs
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     create: true
     fields:
       - { label: Template, name: template, widget: hidden, default: CVB }
       - { label: Name, name: title, widget: string }
-      - label: "Categories"
-        name: "categories"
-        widget: "list"
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
         required: false
         fields:
-          - label: "Category"
-            name: "category"
-            widget: "relation"
-            collection: "postCategories"
-            searchFields: ["title"]
-            valueField: "title"
-            default: "cvbs"
-      - label: "Status"
-        name: "status"
-        widget: "select"
-        options: ["Published", "Featured", "Draft"]
-        default: "Published"
+          - label: 'Category'
+            name: 'category'
+            widget: 'relation'
+            collection: 'postCategories'
+            searchFields: ['title']
+            valueField: 'title'
+            default: 'cvbs'
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Published', 'Featured', 'Draft']
+        default: 'Published'
       - {
           label: Featured Image,
           name: featuredImage,
@@ -178,10 +178,10 @@ collections: # A list of collections the CMS should be able to edit
         }
       - { label: Logo, name: logo, widget: image, required: false }
       - { label: Content, name: body, widget: markdown }
-      - label: "CVB info"
+      - label: 'CVB info'
         required: false
-        name: "cvbInfo"
-        widget: "object"
+        name: 'cvbInfo'
+        widget: 'object'
         fields:
           - { label: Address, name: address, widget: string }
           - { label: Phone, name: phone, widget: string }
@@ -200,16 +200,16 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     folder: content/hotels
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: Hotel }
       - { label: Name, name: title, widget: string }
-      - label: "Status"
-        name: "status"
-        widget: "select"
-        options: ["Published", "Featured", "Draft"]
-        default: "Published"
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Published', 'Featured', 'Draft']
+        default: 'Published'
       - {
           label: Featured Image,
           name: featuredImage,
@@ -217,101 +217,178 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
       - { label: Content, name: body, widget: markdown }
-      - label: "Categories"
-        name: "categories"
-        widget: "list"
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
         required: false
         fields:
-          - label: "Category"
-            name: "category"
-            widget: "relation"
-            collection: "postCategories"
-            searchFields: ["title"]
-            valueField: "title"
-            default: "hotels"
-      - label: "Hotel info"
+          - label: 'Category'
+            name: 'category'
+            widget: 'relation'
+            collection: 'postCategories'
+            searchFields: ['title']
+            valueField: 'title'
+            default: 'hotels'
+      - label: 'Hotel info'
         required: false
-        name: "hotelInfo"
-        widget: "object"
+        name: 'hotelInfo'
+        widget: 'object'
         fields:
           - { label: Address, name: address, widget: string }
           - { label: City, name: city, widget: string }
-          - { label: Closest Airport, name: closestAirport, widget: string }
-          - label: "CVB Member?"
-            name: "cvbMember"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - { label: "Diamond amount", name: diamonds, widget: string }
           - {
-              label: Director of Catering,
-              name: directorCatering,
-              widget: string,
+              label: Number of sleeping rooms,
+              name: numberOfSleepingRooms,
+              widget: number,
             }
-          - { label: Director of Sales, name: direcotSales, widget: string }
-          - label: "Fitness Center"
-            name: "fitnessCenter"
-            widget: "select"
-            options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - { label: General Email, name: generalEmail, widget: string }
-          - { label: Largest room 1 (sqft), name: largestRoom1, widget: number }
-          - { label: Largest room 2 (sqft), name: largestRoom2, widget: number }
+          - label: 'Rooms tax percentage'
+            name: 'roomsTaxPercent'
+            widget: 'number'
+          - label: 'Resort fee'
+            name: 'resortFee'
+            widget: 'number'
+          - { label: 'Diamond amount', name: diamonds, widget: string }
+          - { label: Closest Airport, name: closestAirport, widget: string }
           - {
-              label: Loyalty program name,
-              name: loyaltyProgramName,
-              widget: string,
+              label: Total meeting space,
+              name: totalMeetingSpace,
+              widget: text,
             }
           - {
               label: Number of meeting rooms,
               name: meetingRoomsAmount,
               widget: number,
             }
-          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Largest room 1 (sqft), name: largestRoom1, widget: number }
+          - { label: Largest room 2 (sqft), name: largestRoom2, widget: number }
+          - label: 'Public Wifi fee'
+            name: 'publicWifiFee'
+            widget: 'number'
+          - label: 'Guest Wifi Fee'
+            name: 'guestWifiFee'
+            widget: 'number'
+          - label: 'AV Company'
+            name: 'avCompany'
+            widget: 'string'
+          - label: 'Business center'
+            name: 'businessCenter'
+            widget: 'select'
+            options:
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+          - label: 'F&B Tax'
+            name: 'fbTax'
+            widget: string
+          - label: 'Service Charge'
+            name: 'svcCharge'
+            widget: string
           - {
-              label: "Parking fee: self",
+              label: Loyalty program name,
+              name: loyaltyProgramName,
+              widget: string,
+            }
+          - label: 'Union Status'
+            name: 'unionStatus'
+            widget: 'select'
+            options:
+              - { label: 'Union', value: true }
+              - { label: 'Non-Union', value: false }
+          - {
+              label: 'Parking fee: self',
               name: parkingFeeSelf,
               widget: number,
               min: 0,
             }
           - {
-              label: "Parking fee: valet",
+              label: 'Parking fee: valet',
               name: parkingFeeValet,
               widget: number,
               min: 0,
             }
-          - label: "Is there a pool?"
-            name: "hasPool"
-            widget: "select"
+          - label: 'Airport shuttle'
+            name: 'airportShuttle'
+            widget: 'select'
             options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - label: "Is the pool indoors?"
-            name: "hasPoolIndoors"
-            widget: "select"
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+          - {
+              label: 'Restaurants on site',
+              name: restaurants,
+              widget: number,
+              min: 0,
+            }
+          - label: 'Fitness Center'
+            name: 'fitnessCenter'
+            widget: 'select'
             options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - label: "Is there a spa?"
-            name: "hasSpa"
-            widget: "select"
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+          - label: 'Capacity Chart'
+            name: 'capacityChart'
+            widget: 'file'
+            media_library:
+              config:
+                multiple: false
+          - label: 'Meeting space diagram'
+            name: 'meetingSpaceDiagram'
+            widget: 'file'
+            media_library:
+              config:
+                multiple: false
+          - label: 'Banquet Menu'
+            name: 'banquetMenu'
+            widget: 'file'
+            media_library:
+              config:
+                multiple: false
+          - label: 'A/V Memnu'
+            name: 'avMenu'
+            widget: 'file'
+            media_library:
+              config:
+                multiple: false
+          - label: 'Come find us'
+            name: 'comeFindUs'
+            widget: string
+          - label: 'CVB Member?'
+            name: 'cvbMember'
+            widget: 'select'
             options:
-              - { label: "Yes", value: true }
-              - { label: "No", value: false }
-          - label: "Public Wifi fee"
-            name: "publicWifiFee"
-            widget: "number"
-          - label: "Resort fee"
-            name: "resortFee"
-            widget: "number"
-          - label: "Rooms tax percentage"
-            name: "roomsTaxPercent"
-            widget: "number"
-          - label: "Sales email"
-            name: "salesEmail"
-            widget: "string"
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+          - {
+              label: Director of Catering,
+              name: directorCatering,
+              widget: string,
+            }
+          - { label: Director of Sales, name: direcotSales, widget: string }
+
+          - { label: General Email, name: generalEmail, widget: string }
+
+          - { label: Logo, name: logo, widget: image, required: false }
+
+          - label: 'Is there a pool?'
+            name: 'hasPool'
+            widget: 'select'
+            options:
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+          - label: 'Is the pool indoors?'
+            name: 'hasPoolIndoors'
+            widget: 'select'
+            options:
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+          - label: 'Is there a spa?'
+            name: 'hasSpa'
+            widget: 'select'
+            options:
+              - { label: 'Yes', value: true }
+              - { label: 'No', value: false }
+
+          - label: 'Sales email'
+            name: 'salesEmail'
+            widget: 'string'
           - { label: Sales tax, name: salesTax, widget: number }
           - {
               label: Sales telephone number,
@@ -323,21 +400,16 @@ collections: # A list of collections the CMS should be able to edit
               name: serviceChargePercent,
               widget: number,
             }
-          - {
-              label: Number of sleeping rooms,
-              name: numberOfSleepingRooms,
-              widget: number,
-            }
           - { label: Number of Suites, name: numberOfSuites, widget: number }
-          - { label: Telepbone, name: telephone, widget: string }
+          - { label: Telephone, name: telephone, widget: string }
           - { label: Twitter Username, name: twitter, widget: string }
           - { label: Website address, name: website, widget: string }
           - { label: zip, name: zip, widget: string }
 
-      - label: "Meta"
+      - label: 'Meta'
         required: false
-        name: "meta"
-        widget: "object"
+        name: 'meta'
+        widget: 'object'
         fields:
           - { label: Title, name: title, widget: string, required: false }
           - {
@@ -345,7 +417,7 @@ collections: # A list of collections the CMS should be able to edit
               name: description,
               widget: text,
               required: false,
-              pattern: [".{,300}", "Must not exceed 300 characters"],
+              pattern: ['.{,300}', 'Must not exceed 300 characters'],
             }
           - {
               label: Canonical Link,
@@ -360,7 +432,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     folder: content/postCategories
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: BlogIndex }
@@ -382,15 +454,15 @@ collections: # A list of collections the CMS should be able to edit
       #     - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
       #     - {label: Noindex, name: noindex, widget: boolean, required: false}
 
-  - name: "settings"
-    label: "Settings"
+  - name: 'settings'
+    label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
-      - file: "content/settings/global.yml"
-        label: "Global Settings"
-        name: "global-settings"
+      - file: 'content/settings/global.yml'
+        label: 'Global Settings'
+        name: 'global-settings'
         fields:
           - { label: Site Title, name: siteTitle, widget: string }
           - { label: Site Url, name: siteUrl, widget: string, required: false }
