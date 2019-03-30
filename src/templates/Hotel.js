@@ -10,6 +10,9 @@ import Image from '../components/Image'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 import { Heart, Star, Frown } from 'react-feather'
 import HotelFact from '../components/HotelFact'
+import Slider from '../components/protipSlider'
+import DatePicker from 'react-date-picker'
+import StarRatings from '../components/starRatings'
 
 import './SinglePost.css'
 
@@ -220,6 +223,159 @@ export const HotelPostTemplate = ({
             <HotelFact title="Pool" value={hotelInfo.hasPool} />
             <HotelFact title="Spa" value={hotelInfo.hasSpa} />
           </Box>
+        </Flex>
+
+        <Flex bg="#424242" color="white" p={3} flexDirection="column">
+          <Heading color="orange">
+            Held Your Event at this Venue? Let Us Know!
+          </Heading>
+          <Box py={3}>
+            <Slider />
+          </Box>
+          <Flex flexDirection="column" py={3}>
+            <label>Group type</label>
+            <select>
+              <option>Group type option 1</option>
+              <option>Group type option 2</option>
+              <option>Group type option 3</option>
+            </select>
+          </Flex>
+          <Flex flexDirection="column" py={3}>
+            <label>Date</label>
+            <DatePicker maxDetail="year" value={new Date()} />
+          </Flex>
+          <Flex flexDirection="column" py={3}>
+            <label>How many attendees?</label>
+            <input type="number" />
+          </Flex>
+          <Flex flexDirection="column" py={3}>
+            <label>How many days is your program?</label>
+            <input type="number" min="1" max="60" />
+          </Flex>
+          <Flex flexDirection="column" py={3}>
+            <label>How many sleeping rooms on peak?</label>
+            <input type="number" min="1" />
+          </Flex>
+
+          <Flex flexDirection="column" textAlign="center">
+            <Heading py={2} color="orange">
+              Have a Pro-Tip to Share?
+            </Heading>
+            <Text py={2} fontSize={3}>
+              Leave a tidbit that only you may know from your event at this
+              venue. These factual experiences can relate to anything about the
+              venue that will benefit the next planner with their site
+              selection.
+            </Text>
+            <Text py={2} fontSize={1}>
+              Note: This is not a review! No emotional opinions. No comments
+              about humans. (example: location benefits, pillars in rooms, thin
+              air walls, creative banquet food, union restrictions, free meeting
+              space Wi-Fi, you get the idea!)
+            </Text>
+          </Flex>
+
+          <Flex flexDirection="column">
+            <Heading pb={2} textAlign="center" color="orange" py={3} mt={4}>
+              Grade the following based on your event at this property
+            </Heading>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="center"
+              py={3}
+              style={{ borderBottom: `1px solid rgba(255,255,255,0.6)` }}
+              mb={3}
+            >
+              <Box width={1 / 2}>
+                <StarRatings
+                  rating={2.403}
+                  starDimension="40px"
+                  starSpacing="15px"
+                />
+              </Box>
+              <Box width={1 / 2}>
+                <Heading>Sales contracting process</Heading>
+              </Box>
+            </Flex>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="center"
+              py={3}
+              style={{ borderBottom: `1px solid rgba(255,255,255,0.6)` }}
+              mb={3}
+            >
+              <Box width={1 / 2}>
+                <StarRatings
+                  rating={2.403}
+                  starDimension="40px"
+                  starSpacing="15px"
+                />
+              </Box>
+              <Box width={1 / 2}>
+                <Heading>Service experience onsite</Heading>
+              </Box>
+            </Flex>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="center"
+              py={3}
+              style={{ borderBottom: `1px solid rgba(255,255,255,0.6)` }}
+              mb={3}
+            >
+              <Box width={1 / 2}>
+                <StarRatings
+                  rating={2.403}
+                  starDimension="40px"
+                  starSpacing="15px"
+                />
+              </Box>
+              <Box width={1 / 2}>
+                <Heading>Group food and beverage quality</Heading>
+              </Box>
+            </Flex>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="center"
+              py={3}
+              style={{ borderBottom: `1px solid rgba(255,255,255,0.6)` }}
+              mb={3}
+            >
+              <Box width={1 / 2}>
+                <select style={{ width: `80%` }}>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Maybe</option>
+                </select>
+              </Box>
+              <Box width={1 / 2}>
+                <Heading>
+                  Would you consider this venue for another event?
+                </Heading>
+              </Box>
+            </Flex>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="center"
+              py={3}
+              style={{ borderBottom: `1px solid rgba(255,255,255,0.6)` }}
+              mb={3}
+            >
+              <Box width={1 / 2}>
+                <select style={{ width: `80%` }}>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </Box>
+              <Box width={1 / 2}>
+                <Heading>Did you encounter any issues in your event?</Heading>
+              </Box>
+            </Flex>
+          </Flex>
         </Flex>
 
         <Flex bg="white" p={3}>
