@@ -67,7 +67,7 @@ export const HotelPostTemplate = ({
       />
     )}
 
-    <div className="container">
+    <div className="container" style={{ overflowX: `hidden` }}>
       <Link className="SinglePost--BackButton" to="/blog/">
         <ChevronLeft /> BACK
       </Link>
