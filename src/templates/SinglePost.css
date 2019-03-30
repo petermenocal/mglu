@@ -74,7 +74,6 @@
 }
 
 .SinglePost--Content {
-  background: white;
   margin-top: 30rem;
 }
 
@@ -109,7 +108,9 @@
 .SinglePost--SideBySide {
   display: flex;
   flex-wrap: wrap;
+  background: white;
   justify-content: space-evenly;
+  color: black;
 }
 .SinglePost--SideBySide iframe,
 .SinglePost--SideBySide div {
