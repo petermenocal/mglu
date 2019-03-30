@@ -6,6 +6,7 @@
   cursor: pointer;
   display: block;
   height: 3rem;
+  z-index: 99999;
   width: 3rem;
   margin-left: -0.5rem;
   margin-top: -0.65rem;
