@@ -75,22 +75,7 @@ export const HotelPostTemplate = ({
         <Flex flexWrap="wrap" bg="rebeccapurple" color="white" p={2}>
           <Box width={[1, 1, 1 / 2]}>
             <div>
-              <div className="SinglePost--Meta">
-                {categories && (
-                  <Fragment>
-                    {categories.map((cat, index) => (
-                      <span
-                        key={cat.category}
-                        className="SinglePost--Meta--Category"
-                      >
-                        {cat.category}
-                        {/* Add a comma on all but last category */}
-                        {index !== categories.length - 1 ? ',' : ''}
-                      </span>
-                    ))}
-                  </Fragment>
-                )}
-              </div>
+              <div className="SinglePost--Meta" />
 
               {title && (
                 <h1
@@ -106,9 +91,7 @@ export const HotelPostTemplate = ({
 
           <Box width={[1, 1, 1 / 2]}>
             <div>
-              <div className="SinglePost--Meta">
-                <span className="SinglePost--Meta--Category">Address</span>
-              </div>
+              <div className="SinglePost--Meta" />
               {hotelInfo.address && (
                 <h1 className="SinglePost--Title" style={{ textAlign: `left` }}>
                   {hotelInfo.address}
@@ -124,32 +107,44 @@ export const HotelPostTemplate = ({
           flexWrap="wrap"
           flexDirection="row"
         >
-          <Box width={[1, 1, 2 / 3]}>
+          <Box width={[1, 1, 1 / 2]}>
             <Flex flexDirection="row" flexWrap="wrap">
               <Box p={3}>
-                <img src="//placehold.it/200x200" />
+                <img src="//placehold.it/330x300" />
               </Box>
-              <Box p={3}>
-                <img src="//placehold.it/200x200" />
-              </Box>
-              <Box p={3}>
-                <img src="//placehold.it/200x200" />
-              </Box>
-              <Box p={3}>
-                <img src="//placehold.it/200x200" />
-              </Box>
-              <Box p={3}>
-                <img src="//placehold.it/200x200" />
-              </Box>
-              <Box p={3}>
-                <img src="//placehold.it/200x200" />
-              </Box>
+              <Flex
+                flexDirection="row"
+                alignItems="center"
+                justifyContent="space-evenly"
+                p={3}
+              >
+                <Box width={1 / 4} pr={2}>
+                  <img src="//placehold.it/75x75" />
+                </Box>
+                <Box width={1 / 4} pr={2}>
+                  <img src="//placehold.it/75x75" />
+                </Box>
+                <Box width={1 / 4} pr={2}>
+                  <img src="//placehold.it/75x75" />
+                </Box>
+                <Box width={1 / 4} pr={2}>
+                  <img src="//placehold.it/75x75" />
+                </Box>
+              </Flex>
+              <Flex flexDirection="column">
+                <Heading>Come find us!</Heading>
+                <Text fontWeight={1} fontSize={3}>
+                  Event details
+                </Text>
+                <Text>
+                  Minceptos interdum erat augue tellus dolor fringilla conubia,
+                  curae dictum lacus litora in libero, adipiscing habitant
+                  taciti bibendum integer mauris.
+                </Text>
+              </Flex>
             </Flex>
           </Box>
-          <Box
-            width={[1, 1, 1 / 3]}
-            style={{ maxHeight: 500, overflow: `scroll` }}
-          >
+          <Box width={[1, 1, 1 / 2]}>
             <HotelFact
               title="Director of Sales"
               value={hotelInfo.direcotSales}

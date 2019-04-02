@@ -2,14 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Flex, Box, Heading, Text } from 'rebass'
 
-const HotelFact = props => (
-  <Flex>
-    <Box py={2}>
-      <Heading fontSize={1}>{props.title}</Heading>
-      <Text>{props.value}</Text>
-    </Box>
-  </Flex>
-)
+const HotelFact = props => {
+  const val = props.value
+  return (
+    <Flex flexDirection="row">
+      <Box width={[1, 2 / 3]}>
+        <Heading fontSize={1} small>
+          {props.title}
+        </Heading>
+      </Box>
+      <Box width={[1, 1 / 3]}>
+        <Text>{props.value}</Text>
+      </Box>
+    </Flex>
+  )
+}
 
 export default HotelFact
 
