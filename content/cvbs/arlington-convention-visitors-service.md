@@ -1,5 +1,5 @@
 ---
-template: CVB 
+template: CVB
 title: Arlington Convention & Visitors Service
 categories:
   - category: CVBs
@@ -9,9 +9,9 @@ logo: /images/uploads/screen-shot-2019-02-24-at-7.41.32-am.png
 cvbInfo:
   address: '1100 N Glebe Road Arlington, VA'
   conventionCenter: None
-  twitter: LVCVA
   hotelInventory: '11,000 sleeping rooms'
   phone: 1-800-677-6267
+  twitter: ArlingtonVA
 ---
 
 test
