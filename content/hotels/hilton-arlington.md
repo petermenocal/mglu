@@ -4,7 +4,7 @@ title: Hilton Arlington
 status: Published
 featuredImage: /images/uploads/hilton-arlington.jpg
 categories:
-  - category: 'Hotel '
+  - category: Hotels
 hotelInfo:
   address: 950 North Stafford Street
   airportShuttle: 'false'
