@@ -41,7 +41,7 @@ hotelInfo:
   telephone: ''
   totalMeetingSpace: '1330'
   twitter: MarriottBonvoy
-  unionStatus: 'false'
+  unionStatus: 'true'
   website: 'https://www.marriott.com/hotels/travel/oakcd-courtyard-oakland-downtown/'
   zip: '94607'
 ---
