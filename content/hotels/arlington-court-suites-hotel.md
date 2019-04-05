@@ -15,6 +15,8 @@ hotelInfo:
   fbTax: '10'
   fitnessCenter: 'true'
   guestWifiFee: '0'
+  hasPool: 'false'
+  hasSpa: 'false'
   largestRoom1: '1360'
   largestRoom2: '1344'
   loyaltyProgramName: Choice Privileges
