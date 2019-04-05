@@ -32,12 +32,12 @@ hotelInfo:
   parkingFeeValet: '40'
   publicWifiFee: '0'
   resortFee: '0'
-  roomsTaxPercent: '14'
+  roomsTaxPercent: '14.02'
   salesEmail: ''
   salesTax: '19'
   salesTelephone: ''
   serviceChargePercent: '25'
-  svcCharge: '24'
+  svcCharge: '22'
   telephone: ''
   totalMeetingSpace: '1330'
   twitter: MarriottBonvoy
@@ -68,4 +68,4 @@ BIG SAVINGS START @COURTYARD OAKLAND DOWNTOWN!
 * 10,000 Marriott Reward Points (Level 2)
 * 1 Complimentary Staff Room per night (Level 2)
 
-[BOOK NOW](https://www.marriott.com/hotels/event-planning/business-meeting/oakcd-courtyard-oakland-downtown)
+Terms: Perks do not apply to existing contracted groups. Minimum of 10 rooms on peak night required with a signed standard contract agreement, courtesy agreements do not qualify for this incentive. Hotel reserves the right to modify or substitute perks of equal or similar value. Groups which have both rooms and meetings will be counted as one event and will be given the option to choose from perks based on total value of event. Groups who elect gift card counts as 1 card per level, per event, which means you can elect 1 gift card but cannot elect a second gift card from the same level as your second perk. Marriott Rewards are subject to terms and conditions, to sign up and for full terms visit www.Marriott/rewards.com. Rewards Points are awarded upon fully executed contract and within 15 days of group's departure. Offer cannot be combined with any other offers, subject to availability and contracting terms. Book by June 30, 2019 and arrive by December 31, 2019
