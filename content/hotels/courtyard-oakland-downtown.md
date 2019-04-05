@@ -13,6 +13,7 @@ hotelInfo:
   businessCenter: 'true'
   city: Oakland
   closestAirport: 'OAK : 9 mi | SFO : 21 mi'
+  comeFindUs: Connect California | April 22-23 | Marriott Oakland
   cvbMember: ''
   diamonds: AAA 3 Diamond
   direcotSales: ''
@@ -33,6 +34,7 @@ hotelInfo:
   parkingFeeValet: '40'
   publicWifiFee: '0'
   resortFee: '0'
+  restaurants: '1'
   roomsTaxPercent: '14.02'
   salesEmail: ''
   salesTax: ''
