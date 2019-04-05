@@ -11,7 +11,7 @@ hotelInfo:
   avCompany: PSAV
   businessCenter: 'true'
   city: Oakland
-  closestAirport: OAK or SFO
+  closestAirport: 'OAK : 9 mi | SFO : 21 mi'
   cvbMember: ''
   diamonds: AAA 3 Diamond
   direcotSales: ''
