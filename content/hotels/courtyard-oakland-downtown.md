@@ -25,7 +25,7 @@ hotelInfo:
   largestRoom1: '1200'
   largestRoom2: '1500'
   loyaltyProgramName: Marriott Bonvoy
-  meetingRoomsAmount: '1'
+  meetingRoomsAmount: '3'
   numberOfSleepingRooms: '162'
   numberOfSuites: ''
   parkingFeeSelf: '35'
