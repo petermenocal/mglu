@@ -7,33 +7,41 @@ categories:
   - category: Hotels
 hotelInfo:
   address: 9888 Broadway
+  airportShuttle: 'false'
+  avCompany: PSAV
+  businessCenter: 'true'
   city: Oakland
   closestAirport: OAK or SFO
   cvbMember: ''
   diamonds: AAA 3 Diamond
   direcotSales: ''
+  fbTax: '9.25'
   fitnessCenter: 'true'
   generalEmail: ''
+  guestWifiFee: '0'
   hasPool: 'true'
   hasPoolIndoors: ''
   hasSpa: 'false'
   largestRoom1: '1200'
   largestRoom2: '1500'
   loyaltyProgramName: Marriott Bonvoy
-  meetingRoomsAmount: '3'
+  meetingRoomsAmount: '1'
   numberOfSleepingRooms: '162'
   numberOfSuites: ''
   parkingFeeSelf: '35'
   parkingFeeValet: '40'
   publicWifiFee: '0'
   resortFee: '0'
-  roomsTaxPercent: '10'
+  roomsTaxPercent: '14'
   salesEmail: ''
   salesTax: '19'
   salesTelephone: ''
   serviceChargePercent: '25'
+  svcCharge: '24'
   telephone: ''
+  totalMeetingSpace: '1330'
   twitter: MarriottBonvoy
+  unionStatus: 'false'
   website: 'https://www.marriott.com/hotels/travel/oakcd-courtyard-oakland-downtown/'
   zip: '94607'
 ---
