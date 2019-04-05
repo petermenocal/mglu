@@ -9,6 +9,7 @@ hotelInfo:
   address: 9888 Broadway
   airportShuttle: 'false'
   avCompany: PSAV
+  banquetMenu: /images/uploads/cy-oak-dt-banquet-menus.pdf
   businessCenter: 'true'
   city: Oakland
   closestAirport: 'OAK : 9 mi | SFO : 21 mi'
