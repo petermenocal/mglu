@@ -2,7 +2,7 @@
 template: Hotel
 title: Courtyard Oakland Downtown
 status: Published
-featuredImage: /images/uploads/cty-oakland-dt-36.jpg
+featuredImage: /images/uploads/cy-oakland-dt-hotel.jpg
 categories:
   - category: Hotels
 hotelInfo:
@@ -34,9 +34,9 @@ hotelInfo:
   resortFee: '0'
   roomsTaxPercent: '14.02'
   salesEmail: ''
-  salesTax: '19'
+  salesTax: ''
   salesTelephone: ''
-  serviceChargePercent: '25'
+  serviceChargePercent: ''
   svcCharge: '22'
   telephone: ''
   totalMeetingSpace: '1330'
