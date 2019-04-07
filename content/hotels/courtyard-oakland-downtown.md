@@ -36,7 +36,7 @@ hotelInfo:
   resortFee: '0'
   restaurants: '1'
   roomsTaxPercent: '14.02'
-  salesEmail: ''
+  salesEmail: Ruben.Barahona@interstatehotels.com
   salesTax: ''
   salesTelephone: ''
   serviceChargePercent: ''
