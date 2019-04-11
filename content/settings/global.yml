@@ -1,6 +1,8 @@
 siteTitle: Meeting Glue
 siteUrl: 'https://mglue.netlify.com'
-siteDescription: Meeting Glue Description
+siteDescription: >-
+  Meeting Glue is the only online planner community dedicated to the research
+  and placement of group business around the world.
 socialMediaCard:
   image: /images/uploads/card-og.png
 headerScripts: <!-- Add your analytics scripts / verification meta here -->
